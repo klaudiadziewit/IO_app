@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.WorkerSend"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Zgłaszanie szkód samochodowych" Height="500" Width="600">
+    <Grid>
+        <Label x:Name="label" Content="Imię" HorizontalAlignment="Left" Margin="48,46,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="ID" HorizontalAlignment="Left" Margin="48,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Data" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.158,3.654"/>
+        <Label x:Name="label_Copy2" Content="Miasto" HorizontalAlignment="Left" Margin="48,139,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy3" Content="Policja?" HorizontalAlignment="Left" Margin="48,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.316,6.192"/>
+        <Label x:Name="label_Copy4" Content="Pogotowie?" HorizontalAlignment="Left" Margin="48,201,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy5" Content="Nazwisko" HorizontalAlignment="Left" Margin="292,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.211,4.269"/>
+        <Label x:Name="label_Copy6" Content="PESEL" HorizontalAlignment="Left" Margin="292,77,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy7" Content="Kraj" HorizontalAlignment="Left" Margin="292,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="6.263,3.115"/>
+        <Label x:Name="label_Copy8" Content="Ulica" HorizontalAlignment="Left" Margin="292,139,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy9" Content="Nr. zgł pol" HorizontalAlignment="Left" Margin="292,170,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy10" Content="Laweta?" HorizontalAlignment="Left" Margin="292,201,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="292,269,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="121,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" Margin="121,111,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="23" Margin="121,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Height="23" Margin="121,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Height="23" Margin="121,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy5" HorizontalAlignment="Left" Height="23" Margin="370,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy6" HorizontalAlignment="Left" Height="23" Margin="370,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy7" HorizontalAlignment="Left" Height="23" Margin="370,111,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy8" HorizontalAlignment="Left" Height="23" Margin="370,142,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy9" HorizontalAlignment="Left" Height="23" Margin="370,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Copy10" HorizontalAlignment="Left" Height="23" Margin="370,205,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_Copy11" Content="Status" HorizontalAlignment="Left" Margin="169,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.611,2.808"/>
+        <Button x:Name="button1" Content="Przyjmij zgłoszenie" HorizontalAlignment="Left" Margin="274,343,0,0" VerticalAlignment="Top" Width="193" Click="button_Click" FontSize="20" Height="49"/>
+        <Button x:Name="button_Copy" Content="Anuluj" HorizontalAlignment="Left" Margin="97,343,0,0" VerticalAlignment="Top" Width="75" FontSize="20" Height="49"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="121,46,0,0"/>
+
+    </Grid>
+</Window>
