@@ -75,6 +75,18 @@
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Worker.cs" />
+    <Compile Include="WorkerChange.xaml.cs">
+      <DependentUpon>WorkerChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerDelete.xaml.cs">
+      <DependentUpon>WorkerDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerSend.xaml.cs">
+      <DependentUpon>WorkerSend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkerWindow.xaml.cs">
+      <DependentUpon>WorkerWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="ClientSend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +115,22 @@
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WorkerChange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkerDelete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkerSend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

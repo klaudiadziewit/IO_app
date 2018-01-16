@@ -33,5 +33,12 @@ namespace WpfApp1
         {
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ClientSend clientSend = new ClientSend();
+            clientSend.Show();
+            this.Close();
+        }
     }
 }

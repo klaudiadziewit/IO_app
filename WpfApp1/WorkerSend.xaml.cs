@@ -26,7 +26,14 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("To zgłoszenie zostało pomyślnie przyjęte");
+            this.Close();
+        }
 
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("To zgłoszenie zostało anulowane");
+            this.Close();
         }
     }
 }

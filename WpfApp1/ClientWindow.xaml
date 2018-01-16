@@ -8,7 +8,7 @@
         Title="Zgłaszanie szkód samochodowych" Height="600" Width="600">
     <Grid>
         <Label Content="Wybierz co chcesz zrobić" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94,212,0,0" Height="65" Width="423" FontSize="36"/>
-        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="396" Margin="121,296,0,0" Height="54" FontSize="20"/>
+        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="396" Margin="121,296,0,0" Height="54" FontSize="20" Click="Button_Click_2"/>
         <Button Content="Zmień swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="396" Margin="121,387,0,0" Click="Button_Click" Height="53" FontSize="20"/>
         <Button Content="Usuń swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="396" Margin="121,477,0,0" Click="Button_Click_1" Height="53" FontSize="20"/>
         <TextBox HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" VerticalAlignment="Top" Width="435" Margin="121,128,0,0" FontSize="30"/>

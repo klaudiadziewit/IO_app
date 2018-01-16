@@ -26,7 +26,33 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            WorkerSend workerSend = new WorkerSend();
+            workerSend.Show();
+            this.Close();
+        }
 
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            WorkerChange workerChange = new WorkerChange();
+            workerChange.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            WorkerDelete workerDelete = new WorkerDelete();
+            workerDelete.Show();
+            this.Close();
         }
     }
 }
