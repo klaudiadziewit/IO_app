@@ -7,16 +7,25 @@
         mc:Ignorable="d"
         Title="Zgłaszanie szkód samochodowych" Height="600" Width="600">
     <Grid>
-        <Label x:Name="Wybierz_co_chcesz_zrobić" Content="Wybierz co chesz zrobić&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Width="480" Margin="52,176,0,0" Height="74"/>
-        <Button x:Name="button" Content="Przyjmij zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,255,0,0" FontSize="20" Height="57" Click="button_Click"/>
+        <Label x:Name="Wybierz_co_chcesz_zrobić" Content="Wybierz co chesz zrobić&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="480" Margin="52,227,0,0" Height="38"/>
+        <Button x:Name="button" Content="Przyjmij zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,270,0,0" FontSize="20" Height="57" Click="button_Click"/>
         <Button x:Name="button1" Content="Zmień zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,360,0,0" FontSize="20" Height="52" Click="button1_Click"/>
         <Button x:Name="button2" Content="Usuń zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,449,0,0" FontSize="20" Height="57" Click="button2_Click"/>
-        <Label x:Name="Wybierz_co_chcesz_zrobić_Copy" Content="Podaj id klienta" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Width="262" Margin="52,97,0,0" Height="74"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" Margin="347,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Margin="347,30,0,0"/>
-        <Label x:Name="label" Content="Podaj swoje id" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="52,30,0,0"/>
-        <Button x:Name="button3" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" FontSize="20" Margin="519,97,0,0" Height="40" Click="button3_Click"/>
-        <Button x:Name="button4" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43" Margin="521,37,0,0" FontSize="20" Height="37" RenderTransformOrigin="0.5,0.5" Click="button4_Click">
+        <Label x:Name="Wybierz_co_chcesz_zrobić_Copy" Content="Podaj id klienta" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="151" Margin="52,128,0,0" Height="43"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="32" Margin="207,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" RenderTransformOrigin="0.519,1.125">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.513"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.633"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Margin="207,30,0,0"/>
+        <Label x:Name="label" Content="Podaj swoje id" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="52,27,0,0"/>
+        <Button x:Name="button3" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" FontSize="20" Margin="529,131,0,0" Height="40" Click="button3_Click" RenderTransformOrigin="0.477,2.108"/>
+        <Button x:Name="button4" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43" Margin="535,31,0,0" FontSize="20" Height="37" RenderTransformOrigin="0.5,0.5" Click="button4_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -26,6 +35,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="521" Margin="52,88,0,0" IsEnabled="False"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="521" Margin="52,189,0,0" IsEnabled="False"/>
 
     </Grid>
 </Window>

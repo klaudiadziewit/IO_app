@@ -18,22 +18,23 @@
         <Label Content="Miasto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,151,0,0"/>
         <Label Content="Policja" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,198,0,0"/>
         <Label Content="Laweta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,236,0,0"/>
-        <Label Content="Pogotowie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,236,0,0"/>
-        <Label Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,284,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="369,23,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="121,198,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="149" Margin="122,240,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="121,155,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="121,112,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="121,65,0,0" TextChanged="TextBox_TextChanged_1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150" Margin="121,23,0,0" TextChanged="TextBox_TextChanged"/>
+        <Label Content ="Samochód zastępczy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,236,0,0"/>
+        <Label Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,297,0,0"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,68,0,0"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,23,0,0"/>
+        <TextBox x:Name="textBox9" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,198,0,0"/>
+        <TextBox x:Name="textBox11" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Margin="176,240,0,0"/>
+        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,155,0,0"/>
+        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,112,0,0"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,65,0,0" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,23,0,0" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="textBox13" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Margin="122,300,0,0"/>
+        <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,240,0,0"/>
+        <TextBox x:Name="textBox10" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,201,0,0"/>
+        <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,155,0,0"/>
+        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,108,0,0"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="335,360,0,0" Height="33" Click="Button_Click"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="50,360,0,0" RenderTransformOrigin="-2.178,0.175" Height="33" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
