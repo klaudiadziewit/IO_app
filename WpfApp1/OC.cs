@@ -8,7 +8,7 @@ namespace WpfApp1
 {
     class OC : InsurancePolicy
     {
-        int OCinsuranceAmount;
+        public int OCinsuranceAmount;
 
         public OC()
         {

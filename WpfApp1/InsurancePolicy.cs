@@ -14,7 +14,7 @@ namespace WpfApp1
 
         public InsurancePolicy()
         {
-            InsurancePolicy insurancePolicy1 = new InsurancePolicy();
+            //InsurancePolicy insurancePolicy1 = new InsurancePolicy();
         }
 
         void ChangePolicy(int policyID) { }

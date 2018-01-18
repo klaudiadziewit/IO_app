@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class Theft : AC
+   class Theft : AC
     {
-        DateTime theftDate;
-        string countryName;
-        string cityName;
-        string streetName;
-
+        public int theftinsuranceAmount;
         public Theft()
         {
         }

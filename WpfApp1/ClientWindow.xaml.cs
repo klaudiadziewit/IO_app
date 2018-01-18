@@ -20,9 +20,9 @@ namespace WpfApp1
     public partial class ClientWindow : Window
     {
 
-      //  DBConnect connect1 = new DBConnect();
-        
+        //  DBConnect connect1 = new DBConnect();
 
+        public static string client_id;
         public ClientWindow()
         {
             InitializeComponent();
@@ -45,6 +45,8 @@ namespace WpfApp1
             ClientSend clientSend = new ClientSend();
             clientSend.Show();
             this.Close();
+           // DBConnect wysylacz = new DBConnect();
+           // wysylacz.Insert();
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -55,10 +57,10 @@ namespace WpfApp1
         private void button_Click_3(object sender, RoutedEventArgs e)
         {
             //connect1.Select();
+           
+            string client_id = textBox.Text;
 
-            string id = textBox.Text;
-
-            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" +  textBox.Text + "%' ";
+            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" + client_id + "%' ";
             
 
             //Create a list to store the result

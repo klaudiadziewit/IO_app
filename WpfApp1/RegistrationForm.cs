@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class RegistrationForm
+     public class RegistrationForm
     {
-        int registrationID;
-        int personalID;
-        DateTime date;
-        string countryName;
-        string cityName;
-        string streetName;
-        List <T> personalNumbersOfPeopleTakingPartInAccident;
-        bool haveThePoliceBeenThere;
-        int policeNumberOfAccident;
-        bool isCarriageNeeded;
-        bool isReplacementCarNeeded;
 
+        public int registrationID;
+        public int personalID;
+        public int date;
+        public string countryName;
+        public string cityName;
+        public string streetName;
+        public bool haveThePoliceBeenThere;
+        public int policeNumberOfAccident;
+        public bool isCarriageNeeded;
+        public bool isReplacementCarNeeded;
+
+     
+       
         public RegistrationForm()
         {
-            RegistrationForm registrationForm1 = new RegistrationForm();
+           // RegistrationForm registrationForm1 = new RegistrationForm();
         }
 
         void ChangeRegistration(int registrationID) { }

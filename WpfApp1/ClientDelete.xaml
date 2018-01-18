@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="500" Width="600" Topmost="True">
+        Title="Zgłaszanie szkód samochodowych" Height="421.986" Width="600" Topmost="True">
     <Grid>
         <Label x:Name="label" Content="Wybierz numer zgłoszenia,&#xD;&#xA;które chcesz anulować" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,41,0,0" FontSize="36"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Margin="191,187,0,0"/>
         <Button x:Name="button" Content="Anuluj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Margin="329,295,0,0" FontSize="20" Click="button_Click" Height="50"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="69" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="435" Margin="72,390,0,0"/>
 
     </Grid>
 </Window>

@@ -8,7 +8,7 @@ namespace WpfApp1
 {
     class AC : InsurancePolicy
     {
-        int ACinsuranceAmount;
+      public  int ACinsuranceAmount;
 
         public AC()
         {

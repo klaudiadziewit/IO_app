@@ -49,7 +49,7 @@ namespace WpfApp1
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Poprawnie połączono");
+                    //MessageBox.Show("Poprawnie połączono");
                     return true;
                 }
                 catch (MySqlException ex)
@@ -73,9 +73,47 @@ namespace WpfApp1
                 }
             }
 
+        //Insert statement
+        public void Insert()
+        {/*
 
-            //Close connection
-            public bool CloseConnection()
+            //string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
+            //string query = "insert into zgloszenie_szkody_samochodowej ( data_zgloszenia,status_zgloszenia, Polisa_samochodowa_ID, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji, id_klienta) VALUES('1','333', 'zate', '4', ' Polska', 'Krakow','ulica', 'd', 'p', 'g','4', '5' )";
+            //string query = "insert into zgloszenie_szkody_samochodowej VALUES(@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta)";
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                //MySqlCommand cmd = new MySqlCommand(query, connection);
+                //string query = "insert into zgloszenie_szkody_samochodowej VALUES(@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta)";
+                string query = "insert into zgloszenie_szkody_samochodowej VALUES(@kraj, @miasto, @ulica)";
+
+                //MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(@id_zgloszenia,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta)"),connection;
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //cmd.Parameters.AddWithValue("@data_zgloszenia", "222");
+                //cmd.Parameters.AddWithValue("@status_zgloszenia", "dfas");
+                //cmd.Parameters.AddWithValue("@Polisa_samochodowa_ID", "222");
+                cmd.Parameters.AddWithValue("@kraj", "polska");
+                cmd.Parameters.AddWithValue("@miasto", "krka");
+                cmd.Parameters.AddWithValue("@ulica", "banan");
+                //cmd.Parameters.AddWithValue("@policja", "1");
+                //cmd.Parameters.AddWithValue(" @samochod_zastepczy", "1");
+                //cmd.Parameters.AddWithValue(" @laweta", "1");
+                //cmd.Parameters.AddWithValue(" @numer_policji", "222");
+                //cmd.Parameters.AddWithValue(" @id_klienta", "5");
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            } */
+        }
+
+       
+        //Close connection
+        public bool CloseConnection()
             {
                 try
                 {
@@ -87,6 +125,7 @@ namespace WpfApp1
                     MessageBox.Show(ex.Message);
                     return false;
                 }
+                
             }
 
 

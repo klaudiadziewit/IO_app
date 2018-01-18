@@ -27,6 +27,7 @@ namespace WpfApp1
     {
        
      public static DBConnect connect = new DBConnect();
+     
 
         public MainWindow()
         {
@@ -46,6 +47,7 @@ namespace WpfApp1
         //this.connection.CloseConnection();
         // DBConnect connect = new DBConnect();
         connect.OpenConnection();
+            MessageBox.Show("Poprawnie połączono!");
           //  kupal.Select();
             //kupal.Count();
             connect.CloseConnection();

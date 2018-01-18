@@ -13,28 +13,28 @@
             <ColumnDefinition Width="169*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Wypełnij formularz" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,570.333" Height="54" Width="208" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,32,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Margin="235,231,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,149,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,110,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,71,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,32,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="319" Margin="235,231,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,149,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,110,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="447" Margin="85,71,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
         <Label Content="Data zdarzenia:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,28,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Nazwa kraju:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,68,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Nazwa miasta:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,106,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Ulica:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,146,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Numer zdarzenia nadany przez policję:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,229,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Czy na miejscu zdarzenia była policja?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,187,0,0" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,194,0,0" Checked="CheckBox_Checked" Grid.Column="1"/>
-        <CheckBox Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,194,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,194,0,0" Checked="CheckBox_Checked" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,194,0,0" Grid.Column="1"/>
         <Label Content="Czy był podstawiony samochód zastępczy?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,317,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Czy była podstawiona laweta?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,275,0,0" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,328,0,0" Checked="CheckBox_Checked_2" Grid.Column="1"/>
-        <CheckBox Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,328,0,0" Grid.Column="1"/>
-        <CheckBox Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,283,0,0" Checked="CheckBox_Checked_1" Grid.Column="1"/>
-        <CheckBox Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,283,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,328,0,0" Checked="CheckBox_Checked_2" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,328,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,283,0,0" Checked="CheckBox_Checked_1" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,283,0,0" Grid.Column="1"/>
         <Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Margin="213,381,0,0" Click="Button_Click" FontSize="16" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Margin="85,427,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="352" Margin="85,488,0,0" Height="37" SelectionChanged="ComboBox_SelectionChanged" IsReadOnly="True" Cursor="None" IsDropDownOpen="True" Grid.Column="1" Grid.ColumnSpan="2">
+        <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Margin="85,427,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="352" Margin="85,488,0,0" Height="37" SelectionChanged="ComboBox_SelectionChanged" IsReadOnly="True" Cursor="None" IsDropDownOpen="True" Grid.Column="1" Grid.ColumnSpan="2">
             <ComboBoxItem Content="OC"/>
             <ComboBoxItem Content="Kradzież"/>
             <ComboBoxItem Content="AC"/>
