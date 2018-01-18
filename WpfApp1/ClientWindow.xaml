@@ -7,15 +7,22 @@
         mc:Ignorable="d"
         Title="Zgłaszanie szkód samochodowych" Height="600" Width="600">
     <Grid>
-        <Label Content="Wybierz co chcesz zrobić" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,195,0,0" Height="65" Width="423" FontSize="36"/>
-        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,293,0,0" Height="54" FontSize="20" Click="Button_Click_2"/>
-        <Button Content="Zmień swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,378,0,0" Click="Button_Click" Height="53" FontSize="20"/>
-        <Button Content="Usuń swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,461,0,0" Click="Button_Click_1" Height="53" FontSize="20"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Margin="121,118,0,0" FontSize="30"/>
-        <Label Content="Witaj&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,106,0,0"/>
-        <Label x:Name="label" Content="Podaj swój numer:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,28,0,0"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Margin="342,41,0,0" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="506,41,0,0" FontSize="20" Height="45" Click="button_Click_3"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="474*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Wybierz co chcesz zrobić" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,195,0,0" Height="65" Width="423" FontSize="36" Grid.ColumnSpan="5"/>
+        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,293,0,0" Height="54" FontSize="20" Click="Button_Click_2" Grid.ColumnSpan="5"/>
+        <Button Content="Zmień swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,378,0,0" Click="Button_Click" Height="53" FontSize="20" Grid.ColumnSpan="5"/>
+        <Button Content="Usuń swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,461,0,0" Click="Button_Click_1" Height="53" FontSize="20" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Margin="1.55,118,0,0" FontSize="30" Grid.Column="4"/>
+        <Label Content="Witaj&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,106,0,0" Grid.ColumnSpan="4" Height="106" Width="91"/>
+        <Label x:Name="label" Content="Podaj swój numer:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,28,0,0" Grid.ColumnSpan="5" Height="58" Width="300"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Margin="222.55,41,0,0" TextChanged="textBox_TextChanged" Grid.Column="4"/>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="386.55,41,0,0" FontSize="20" Height="45" Click="button_Click_3" Grid.Column="4"/>
 
     </Grid>
 </Window>

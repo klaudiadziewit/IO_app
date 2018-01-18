@@ -56,6 +56,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AC.cs" />
+    <Compile Include="ClientChange.xaml.cs">
+      <DependentUpon>ClientChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDelete.xaml.cs">
+      <DependentUpon>ClientDelete.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientSend.xaml.cs">
       <DependentUpon>ClientSend.xaml</DependentUpon>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="WorkerChange.xaml.cs">
       <DependentUpon>WorkerChange.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WorkerChangeForm.xaml.cs">
+      <DependentUpon>WorkerChangeForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkerDelete.xaml.cs">
       <DependentUpon>WorkerDelete.xaml</DependentUpon>
     </Compile>
@@ -88,6 +97,14 @@
     <Compile Include="WorkerWindow.xaml.cs">
       <DependentUpon>WorkerWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ClientChange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ClientDelete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ClientSend.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WorkerChange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkerChangeForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

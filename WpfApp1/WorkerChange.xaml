@@ -8,7 +8,7 @@
         Title="Zgłaszanie szkód samochodowych" Height="500" Width="600">
     <Grid>
         <Label x:Name="label" Content="Podaj numer zgłoszenia klienta,&#xD;&#xA;które chcesz zmienić" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="41,45,0,0"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Margin="51,249,0,0" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" Margin="51,249,0,0" RenderTransformOrigin="0.5,0.5" TextChanged="textBox_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,7 +18,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="441,253,0,0" FontSize="20" Click="button_Click" Height="53"/>
+        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="441,254,0,0" FontSize="20" Click="button_Click" Height="53"/>
 
     </Grid>
 </Window>

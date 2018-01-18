@@ -58,7 +58,7 @@ namespace WpfApp1
 
             string id = textBox.Text;
 
-            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" +  textBox.Text + "%' ";
+            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" +  id + "%' ";
             
 
             //Create a list to store the result
@@ -88,8 +88,6 @@ namespace WpfApp1
                     // textBox1.Text =  dataReader["nazwisko"] + "";
                     //  dataReader["ID"] + ""
 
-
-                  
 
                 }
 
