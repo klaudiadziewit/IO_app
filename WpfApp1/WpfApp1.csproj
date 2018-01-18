@@ -62,6 +62,7 @@
     <Compile Include="ClientWindow.xaml.cs">
       <DependentUpon>ClientWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DBConnect.cs" />
     <Compile Include="InsurancePolicy.cs" />
     <Compile Include="OC.cs" />
     <Compile Include="ReceivedRegistrationForm.cs" />

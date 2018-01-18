@@ -15,34 +15,23 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Logika interakcji dla klasy startingWindow.xaml
+    /// Logika interakcji dla klasy WorkerChangeForm.xaml
     /// </summary>
-    public partial class startingWindow : Window
+    public partial class WorkerChangeForm : Window
     {
-        public startingWindow()
+        public WorkerChangeForm()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-
-
-            ClientWindow clientWindow = new ClientWindow();
-            clientWindow.Show();
-            this.Close();
-
-
-
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            WorkerWindow workerWindow = new WorkerWindow();
-            workerWindow.Show();
-            this.Close();
+
         }
     }
 }

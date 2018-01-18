@@ -12,8 +12,8 @@
         <Button x:Name="button1" Content="Zmień zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,360,0,0" FontSize="20" Height="52" Click="button1_Click"/>
         <Button x:Name="button2" Content="Usuń zgłoszenie klienta" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Margin="52,449,0,0" FontSize="20" Height="57" Click="button2_Click"/>
         <Label x:Name="Wybierz_co_chcesz_zrobić_Copy" Content="Podaj id klienta" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Width="262" Margin="52,97,0,0" Height="74"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" Margin="347,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="147"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="147" Margin="347,30,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="48" Margin="347,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Margin="347,30,0,0"/>
         <Label x:Name="label" Content="Podaj swoje id" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="52,30,0,0"/>
         <Button x:Name="button3" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="44" FontSize="20" Margin="519,97,0,0" Height="40" Click="button3_Click"/>
         <Button x:Name="button4" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="43" Margin="521,37,0,0" FontSize="20" Height="37" RenderTransformOrigin="0.5,0.5" Click="button4_Click">

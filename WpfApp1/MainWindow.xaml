@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Zgłaszanie szkód samochodowych" Height="200" Width="300">
     <Grid>
-        <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" Margin="201,126,0,0"/>
+        <Button Content="Połącz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Click="Button_Click" Margin="177,119,0,0" FontSize="20"/>
+        <Label Content="Witaj w programie do zgłaszania&#xD;&#xA;szkód samochodowych. &#xD;&#xA;Kliknij Połącz, by nawiązać &#xD;&#xA;połączenie z serwerem" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Height="104" Width="273" FontSize="16"/>
 
     </Grid>
 </Window>

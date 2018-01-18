@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="500" Width="600">
-    <Grid>
-        <Label x:Name="label" Content="Podaj numer zgłoszenia klienta,&#xD;&#xA;które chcesz usunąć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,52,0,0" FontSize="36" Width="560"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="178" Margin="194,212,0,0"/>
-        <Button x:Name="button" Content="Usuń zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Margin="386,304,0,0" FontSize="20" Click="button_Click" Height="56"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="87" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="523" Margin="22,372,0,0"/>
+        Title="Zgłaszanie szkód samochodowych" Height="455.403" Width="600">
+    <Grid Height="490" Margin="0,0,0.333,-19.333" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="561*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Podaj numer zgłoszenia klienta,&#xD;&#xA;które chcesz usunąć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,52,0,0" FontSize="36" Width="560" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="59" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Margin="162.17,212,0,0" Grid.Column="1"/>
+        <Button x:Name="button" Content="Usuń zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="183" Margin="339,302,0,0" FontSize="20" Click="button_Click" Height="73" Grid.Column="1"/>
 
     </Grid>
 </Window>
