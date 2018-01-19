@@ -33,17 +33,18 @@ namespace WpfApp1
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            
+            CheckBox2.IsChecked = false;
+            TextBox5.IsEnabled = true;
         }
 
         private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
         {
-
+            CheckBox3.IsChecked = false;
         }
 
         private void CheckBox_Checked_2(object sender, RoutedEventArgs e)
         {
-
+            CheckBox5.IsChecked = false;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -149,9 +150,6 @@ namespace WpfApp1
 
             }
            
-     
-
-
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -254,6 +252,23 @@ namespace WpfApp1
                 MessageBox.Show("Wybierz typ ubezpiecznie!");
             }
             
+        }
+
+        private void CheckBox2_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox1.IsChecked = false;
+            TextBox5.Text = "0";
+            TextBox5.IsEnabled = false;
+        }
+
+        private void CheckBox3_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox4.IsChecked = false;
+        }
+
+        private void CheckBox5_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox6.IsChecked = false;
         }
     }
 }
