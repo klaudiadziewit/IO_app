@@ -20,11 +20,12 @@ namespace WpfApp1
     /// </summary>
     public partial class WorkerSend : Window
     {
+        string IDofClient = WorkerWindow.clientID;
+        string IDofClientForm = WorkerSendChooseForm.clientFormID;
         public WorkerSend()
         {
             InitializeComponent();
             string name, surname, personalID, date, country, city, street, police, numberPolice, replacementCar, carriage, status;
-            string IDofClient = WorkerWindow.clientID;
             string query = "SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID LIKE '%" + IDofClient + "%'";
            // string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%'";
             //Open connection
@@ -51,12 +52,12 @@ namespace WpfApp1
                 dataReader.Close();
 
 
-              string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%'";
+              string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%'";
                 MySqlCommand cmd2 = new MySqlCommand(query2, MainWindow.connect.connection);
                 MySqlDataReader dataReader2 = cmd2.ExecuteReader();
                 while (dataReader2.Read())
                 {
-                    textBox5.Text = dataReader2["data_zgloszenia"] + "";
+                    //textBox5.Text = dataReader2["data_zgloszenia"] + "";
                     textBox6.Text = dataReader2["kraj"] + "";
                     textBox7.Text = dataReader2["miasto"] + "";
                     textBox8.Text = dataReader2["ulica"] + "";
@@ -64,7 +65,7 @@ namespace WpfApp1
                     textBox10.Text = dataReader2["numer_policji"] + "";
                     textBox11.Text = dataReader2["samochod_zastepczy"] + "";
                     textBox12.Text = dataReader2["laweta"] + "";
-                    textBox13.Text = dataReader2["status"] + "";
+                    textBox13.Text = dataReader2["status_zgloszenia"] + "";
 
                     // textBox1.Text =  dataReader["nazwisko"] + "";
                     //  dataReader["ID"] + ""
@@ -74,8 +75,6 @@ namespace WpfApp1
 
 
                 MainWindow.connect.CloseConnection();
-
-
             }
             else
             {
@@ -84,6 +83,17 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            string status = "zatwierdzony";
+            string query3= "UPDATE zgloszenie_szkody_samochodowej SET status_zgloszenia = 'zatwierdzone' WHERE id_zgloszenia = '" + IDofClientForm + "'";
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query3;
+                cmd.Connection = MainWindow.connect.connection;
+                cmd.ExecuteNonQuery();
+                MainWindow.connect.CloseConnection();
+            }
+
             MessageBox.Show("To zgłoszenie zostało pomyślnie przyjęte");
             this.Close();
         }
