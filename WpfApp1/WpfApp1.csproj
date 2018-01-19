@@ -94,6 +94,9 @@
     <Compile Include="WorkerSend.xaml.cs">
       <DependentUpon>WorkerSend.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WorkerSendChooseForm.xaml.cs">
+      <DependentUpon>WorkerSendChooseForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkerWindow.xaml.cs">
       <DependentUpon>WorkerWindow.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
     <Page Include="WorkerSend.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WorkerSendChooseForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WorkerWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

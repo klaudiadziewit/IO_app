@@ -49,7 +49,6 @@ namespace WpfApp1
                 dataReader.Close();
                 MainWindow.connect.CloseConnection();
 
-
             }
             
             else

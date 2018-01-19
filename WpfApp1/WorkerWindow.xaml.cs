@@ -28,8 +28,8 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            WorkerSend workerSend = new WorkerSend();
-            workerSend.Show();
+            WorkerSendChooseForm workerSendChooseForm = new WorkerSendChooseForm();
+            workerSendChooseForm.Show();
             this.Close();
         }
 
