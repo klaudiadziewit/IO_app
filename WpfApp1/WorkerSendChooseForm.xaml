@@ -10,7 +10,7 @@
         <Button Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="432,262,0,0" Height="52" FontSize="22" Click="Button_Click"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="321" Margin="62,258,0,0" FontSize="22"/>
         <Label Content="Wybierz numer zgłoszenia,&#xD;&#xA;które chcesz przyjąć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,46,0,0" Height="140" Width="462" FontSize="36"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="317" Margin="65,175,0,0" FontSize="22" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" Margin="63,175,0,0" FontSize="22" TextChanged="TextBox_TextChanged" IsEnabled="False"/>
 
     </Grid>
 </Window>
