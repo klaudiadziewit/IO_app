@@ -19,12 +19,23 @@ namespace WpfApp1
     /// </summary>
     public partial class ClientChange : Window
     {
+        public static string id_zgl;
         public ClientChange()
         {
             InitializeComponent();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
+        {
+           
+           //id_zgl = (textBox.Text);
+            ClientChangeForm.clientID = textBox.Text;
+            ClientChangeForm clientChangeForm = new ClientChangeForm();
+            clientChangeForm.Show();
+            this.Close();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

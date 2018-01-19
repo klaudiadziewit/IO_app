@@ -41,6 +41,8 @@ namespace WpfApp1
                 MainWindow.connect.CloseConnection();
             }
 
+            MessageBox.Show("Zgłoszenie zostało usuniete");
+
         }
     }
 }

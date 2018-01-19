@@ -32,12 +32,16 @@ namespace WpfApp1
      
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            ClientChange clientChange = new ClientChange();
+            clientChange.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            ClientDelete clientDelete = new ClientDelete();
+            clientDelete.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -45,8 +49,8 @@ namespace WpfApp1
             ClientSend clientSend = new ClientSend();
             clientSend.Show();
             this.Close();
-           // DBConnect wysylacz = new DBConnect();
-           // wysylacz.Insert();
+            //DBConnect wysylacz = new DBConnect();
+            //wysylacz.Insert();
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -58,9 +62,12 @@ namespace WpfApp1
         {
             //connect1.Select();
            
-            string client_id = textBox.Text;
+            client_id = textBox.Text;
 
-            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" + client_id + "%' ";
+            //string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" + client_id + "%' ";
+            string id = textBox.Text;
+
+            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" +  id + "%' ";
             
 
             //Create a list to store the result
@@ -90,8 +97,6 @@ namespace WpfApp1
                     // textBox1.Text =  dataReader["nazwisko"] + "";
                     //  dataReader["ID"] + ""
 
-
-                  
 
                 }
 
