@@ -54,11 +54,7 @@ namespace WpfApp1
                 }
                 catch (MySqlException ex)
                 {
-                    //When handling errors, you can your application's response based 
-                    //on the error number.
-                    //The two most common error numbers when connecting are as follows:
-                    //0: Cannot connect to server.
-                    //1045: Invalid user name and/or password.
+                    
                     switch (ex.Number)
                     {
                         case 0:
@@ -77,22 +73,16 @@ namespace WpfApp1
         public void Insert()
         {
 
-            //string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
-            //string query = "insert into zgloszenie_szkody_samochodowej ( data_zgloszenia,status_zgloszenia, Polisa_samochodowa_ID, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji, id_klienta) VALUES('1','333', 'zate', '4', ' Polska', 'Krakow','ulica', 'd', 'p', 'g','4', '5' )";
-            //string query = "insert into zgloszenie_szkody_samochodowej VALUES(@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta)";
+       
 
             //open connection
             if (this.OpenConnection() == true)
             {
-                //create command and assign the query and connection from the constructor
-                //MySqlCommand cmd = new MySqlCommand(query, connection);
-                //string query = "insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);";
-                //string query = "insert into zgloszenie_szkody_samochodowej VALUES(@kraj, @miasto, @ulica)";
+               
 
-                //MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(@id_zgloszenia,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);",connection);
+               
                 MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);", connection);
-
-                //MySqlCommand cmd = new MySqlCommand(query, connection);
+                
                 DateTime enteredDate = DateTime.Parse("22-02-2017");
                 cmd.Parameters.AddWithValue("@data_zgloszenia", enteredDate);
                 cmd.Parameters.AddWithValue("@status_zgloszenia", "blabla");
@@ -106,7 +96,7 @@ namespace WpfApp1
                 cmd.Parameters.AddWithValue("@numer_policji", 222);
                 cmd.Parameters.AddWithValue("@id_klienta", 5);
 
-                //Execute command
+               
                 cmd.ExecuteNonQuery();
 
                 //close connection

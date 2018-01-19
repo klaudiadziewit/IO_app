@@ -58,7 +58,7 @@ namespace WpfApp1
 
         }
 
-        private void button_Click_3(object sender, RoutedEventArgs e)
+        public void button_Click_3(object sender, RoutedEventArgs e)
         {
             //connect1.Select();
            

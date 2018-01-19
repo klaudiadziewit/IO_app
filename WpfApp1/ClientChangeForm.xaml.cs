@@ -24,6 +24,41 @@ namespace WpfApp1
 
         public static string C1, C2, C3, clientID;
          RegistrationForm registrationform = new RegistrationForm();
+
+        private void CheckBox2_Checked(object sender, RoutedEventArgs e)
+        {
+            TextBox.Text = "0";
+            TextBox.IsEnabled = false;
+            CheckBox1.IsChecked = false;
+
+        }
+
+        private void CheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+            TextBox.IsEnabled = true;
+            CheckBox2.IsChecked = false;
+        }
+
+        private void CheckBox3_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox4.IsChecked = false;
+        }
+
+        private void CheckBox4_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox3.IsChecked = false;
+        }
+
+        private void CheckBox5_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox6.IsChecked = false;
+        }
+
+        private void CheckBox6_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox5.IsChecked = false;
+        }
+
         public void uzupelnij()
         {
 

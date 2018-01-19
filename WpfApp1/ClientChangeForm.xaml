@@ -19,15 +19,15 @@
         <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="23" Margin="164,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
         <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="26" Margin="164,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
         <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="26" Margin="164,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
-        <Button x:Name="button" Content="Zmień zgłoszenie" HorizontalAlignment="Left" Margin="291,401,0,0" VerticalAlignment="Top" Width="74" Click="button_Click"/>
+        <Button x:Name="button" Content="Zmień zgłoszenie" HorizontalAlignment="Left" Margin="258,401,0,0" VerticalAlignment="Top" Width="110" Click="button_Click"/>
         <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="36" Margin="184,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
         <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="291,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225"/>
-        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" Margin="291,324,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" Margin="405,324,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" Margin="291,247,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" Margin="405,247,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" Margin="291,358,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" Margin="405,358,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" Margin="291,324,0,0" VerticalAlignment="Top" Checked="CheckBox3_Checked"/>
+        <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" Margin="405,324,0,0" VerticalAlignment="Top" Checked="CheckBox4_Checked"/>
+        <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" Margin="291,247,0,0" VerticalAlignment="Top" Checked="CheckBox1_Checked"/>
+        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" Margin="405,247,0,0" VerticalAlignment="Top" Checked="CheckBox2_Checked"/>
+        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" Margin="291,358,0,0" VerticalAlignment="Top" Checked="CheckBox5_Checked"/>
+        <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" Margin="405,358,0,0" VerticalAlignment="Top" Checked="CheckBox6_Checked"/>
         <Label x:Name="label9" Content="Wypełnij formularz" HorizontalAlignment="Left" Margin="34,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>

@@ -25,13 +25,13 @@
         <Label Content="Numer zdarzenia nadany przez policję:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,229,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Czy na miejscu zdarzenia była policja?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,187,0,0" Grid.ColumnSpan="2"/>
         <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,194,0,0" Checked="CheckBox_Checked" Grid.Column="1"/>
-        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,194,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,194,0,0" Grid.Column="1" Checked="CheckBox2_Checked"/>
         <Label Content="Czy był podstawiony samochód zastępczy?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,317,0,0" Grid.ColumnSpan="2"/>
         <Label Content="Czy była podstawiona laweta?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,275,0,0" Grid.ColumnSpan="2"/>
         <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,328,0,0" Checked="CheckBox_Checked_2" Grid.Column="1"/>
-        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,328,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,328,0,0" Grid.Column="1" Checked="CheckBox5_Checked"/>
         <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,283,0,0" Checked="CheckBox_Checked_1" Grid.Column="1"/>
-        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,283,0,0" Grid.Column="1"/>
+        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,283,0,0" Grid.Column="1" Checked="CheckBox3_Checked"/>
         <Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Margin="213,381,0,0" Click="Button_Click" FontSize="16" Grid.Column="1"/>
         <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="352" Margin="85,427,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
         <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="352" Margin="85,488,0,0" Height="37" SelectionChanged="ComboBox_SelectionChanged" IsReadOnly="True" Cursor="None" IsDropDownOpen="True" Grid.Column="1" Grid.ColumnSpan="2">
