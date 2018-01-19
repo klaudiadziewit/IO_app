@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Zgłaszanie szkód samochodowych" Height="500" Width="600" ShowInTaskbar="False">
     <Grid>
-        <Label x:Name="label" Content="Podaj numer zgłoszenia, &#xD;&#xA;które chcesz zmienić " HorizontalAlignment="Left" Margin="95,32,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="49" Margin="197,183,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="139" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="425,319,0,0" FontSize="20" Click="button_Click"/>
+        <Label x:Name="label" Content="Podaj numer zgłoszenia, &#xD;&#xA;które chcesz zmienić " HorizontalAlignment="Left" Margin="105,46,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="87" Margin="119,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="377" TextChanged="textBox_TextChanged" FontSize="36"/>
+        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="390,311,0,0" FontSize="20" Click="button_Click" Height="38"/>
 
     </Grid>
 </Window>

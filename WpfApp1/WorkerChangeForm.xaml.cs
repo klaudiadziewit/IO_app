@@ -20,11 +20,15 @@ namespace WpfApp1
     /// </summary>
     public partial class WorkerChangeForm : Window
     {
+
+        public static string IDofClient = WorkerWindow.clientID;
+        public static string IDofClientForm = WorkerChange.clientFormID;
+        RegistrationForm registrationform = new RegistrationForm();
+        Client client = new Client();
+
         public WorkerChangeForm()
         {
             InitializeComponent();
-            string IDofClient = WorkerWindow.clientID;
-            string IDofClientForm = WorkerChange.clientFormID;
             string query = "SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID LIKE '%" + IDofClient + "%'";
             if (MainWindow.connect.OpenConnection() == true)
             {
@@ -62,7 +66,7 @@ namespace WpfApp1
                     textBox10.Text = dataReader2["numer_policji"] + "";
                     textBox11.Text = dataReader2["samochod_zastepczy"] + "";
                     textBox12.Text = dataReader2["laweta"] + "";
-                    textBox13.Text = dataReader2["status"] + "";
+                    textBox13.Text = dataReader2["status_zgloszenia"] + "";
 
                     // textBox1.Text =  dataReader["nazwisko"] + "";
                     //  dataReader["ID"] + ""
@@ -74,7 +78,7 @@ namespace WpfApp1
             }
             else
             {
-            }
+            } 
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -89,6 +93,8 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+
             int counter = 0;
             if (textBox1.Text == "") counter++;
             else if (textBox2.Text == "") counter++;
@@ -106,6 +112,40 @@ namespace WpfApp1
             else if (textBox1.Text == "") counter++;
             if (counter == 0)
             {
+
+
+                string query3 = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='" + textBox5.Text + "', kraj='" + textBox6.Text + "', miasto='" + textBox7.Text + "', ulica='" + textBox8.Text + "', policja='" + textBox9.Text + "', samochod_zastepczy='" + textBox11.Text + "', laweta='" + textBox12.Text + "',numer_policji='" + textBox10.Text + "' WHERE id_zgloszenia LIKE '%" + IDofClientForm + "%' ";
+
+
+                //Open connection
+                if (MainWindow.connect.OpenConnection() == true)
+                {
+                    //create mysql command
+                    MySqlCommand cmd = new MySqlCommand();
+                    //Assign the query using CommandText
+                    cmd.CommandText = query3;
+                    //Assign the connection using Connection
+                    cmd.Connection = MainWindow.connect.connection;
+
+                    //Execute query
+                    cmd.ExecuteNonQuery();
+
+                    //close connection
+                    MainWindow.connect.CloseConnection();
+                }
+
+
+         
+
+                //registrationform.date = Convert.ToInt32(textBox5.Text);
+                registrationform.countryName = textBox6.Text;
+                registrationform.cityName = textBox7.Text;
+                registrationform.streetName = textBox8.Text;
+                registrationform.haveThePoliceBeenThere = Convert.ToBoolean(textBox9.Text);
+                registrationform.policeNumberOfAccident = Convert.ToInt32(textBox10.Text);
+                //registrationform.isReplacementCarNeeded =textBox11.Text = false;
+                registrationform.isCarriageNeeded = Convert.ToBoolean(textBox12.Text);
+
                 MessageBox.Show("Pomyślnie zmieniono zgłoszenie");
                 this.Close();
             }

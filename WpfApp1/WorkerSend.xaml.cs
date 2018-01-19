@@ -43,10 +43,6 @@ namespace WpfApp1
                     textBox2.Text = dataReader["nazwisko"] + "";
                     textBox3.Text = dataReader["ID"] + "";
                     textBox4.Text = dataReader["pesel"] + "";
-                  
-
-                    // textBox1.Text =  dataReader["nazwisko"] + "";
-                    //  dataReader["ID"] + ""
                 }
                 //close Data Reader
                 dataReader.Close();
@@ -57,7 +53,8 @@ namespace WpfApp1
                 MySqlDataReader dataReader2 = cmd2.ExecuteReader();
                 while (dataReader2.Read())
                 {
-                    //textBox5.Text = dataReader2["data_zgloszenia"] + "";
+                    DateTime enteredDate = DateTime.Parse(dataReader2["data_zgloszenia"] + "");
+                    textBox5.Text = Convert.ToString(enteredDate);
                     textBox6.Text = dataReader2["kraj"] + "";
                     textBox7.Text = dataReader2["miasto"] + "";
                     textBox8.Text = dataReader2["ulica"] + "";

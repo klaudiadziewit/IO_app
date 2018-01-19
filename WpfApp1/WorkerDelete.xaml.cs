@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,15 +20,58 @@ namespace WpfApp1
     /// </summary>
     public partial class WorkerDelete : Window
     {
+        public static string clientFormID;
+        public static string IDofClient = WorkerWindow.clientID;
+        public static string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
+        private static string ExecuteQuery(string query, string columnName)
+        {
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = MainWindow.connect.connection;
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string result = null;
+                while (dataReader.Read())
+                {
+                    result += dataReader[columnName] + ", ";
+                }
+                dataReader.Close();
+                MainWindow.connect.CloseConnection();
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public WorkerDelete()
         {
             InitializeComponent();
+            var dane = ExecuteQuery(query, "id_zgloszenia");
+            textBox2.Text = dane;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            string choose = textBox1.Text;
+            string query = "DELETE FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + textBox1.Text + "%' ";
+
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
+                cmd.ExecuteNonQuery();
+                MainWindow.connect.CloseConnection();
+            }
+
             MessageBox.Show("Pomyślnie usunięto zgłoszenie");
             this.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

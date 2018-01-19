@@ -8,7 +8,7 @@
         Title="Zgłaszanie szkód samochodowych" Height="421.986" Width="600" Topmost="True">
     <Grid>
         <Label x:Name="label" Content="Wybierz numer zgłoszenia,&#xD;&#xA;które chcesz anulować" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,41,0,0" FontSize="36"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Margin="191,187,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Margin="191,187,0,0" FontSize="36"/>
         <Button x:Name="button" Content="Anuluj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Margin="329,295,0,0" FontSize="20" Click="button_Click" Height="50"/>
 
     </Grid>

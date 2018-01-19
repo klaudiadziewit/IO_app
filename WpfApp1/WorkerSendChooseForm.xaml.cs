@@ -21,7 +21,6 @@ namespace WpfApp1
     public partial class WorkerSendChooseForm : Window
     {
         public static string clientFormID;
-
         public static string IDofClient = WorkerWindow.clientID;
         public static string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
         private static string ExecuteQuery(string query, string columnName)
@@ -33,13 +32,11 @@ namespace WpfApp1
                 cmd.Connection = MainWindow.connect.connection;
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-            //Read the data and store them in the list
             string result = null;
             while (dataReader.Read())
             {
                 result += dataReader[columnName] + ", ";
             }
-            //close Data Reader
             dataReader.Close();
                 MainWindow.connect.CloseConnection();
                 return result;
@@ -53,8 +50,6 @@ namespace WpfApp1
     public WorkerSendChooseForm()
         {
             InitializeComponent();
-            //string IDofClient = WorkerWindow.clientID;
-            //string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
             var dane = ExecuteQuery(query, "id_zgloszenia");
             textBox2.Text = dane;
         }

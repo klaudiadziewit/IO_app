@@ -23,15 +23,9 @@ namespace WpfApp1
     {
 
         public static string C1, C2, C3, clientID;
-         RegistrationForm registrationform = new RegistrationForm();
+        RegistrationForm registrationform = new RegistrationForm();
         public void uzupelnij()
         {
-
-
-
-
-            
-
             string query = "SELECT data_zgloszenia,kraj,miasto,ulica,policja,samochod_zastepczy,laweta,numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + clientID + "%' ";
 
             //Open connection

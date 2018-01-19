@@ -31,7 +31,6 @@ namespace WpfApp1
 
             string id_zgloszenia1 = textBox.Text;
 
-
             string query = "DELETE FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + id_zgloszenia1 + "%' ";
 
             if (MainWindow.connect.OpenConnection() == true)
@@ -42,7 +41,7 @@ namespace WpfApp1
             }
 
             MessageBox.Show("Zgłoszenie zostało usuniete");
-
+            this.Close();
         }
     }
 }
