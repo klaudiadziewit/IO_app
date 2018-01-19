@@ -33,7 +33,7 @@ namespace WpfApp1
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
@@ -139,13 +139,13 @@ namespace WpfApp1
             if (CheckBox5.IsChecked == true)
             {
                 CheckBox6.IsEnabled = false;
-                registrationform.isCarriageNeeded = true;
+                registrationform.isReplacementCarNeeded = true;
 
             }
             else
             {
                 CheckBox6.IsEnabled = true;
-                registrationform.isCarriageNeeded = false;
+                registrationform.isReplacementCarNeeded = false;
 
             }
            
@@ -161,23 +161,23 @@ namespace WpfApp1
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            
-            
-                if (ComboBox1.Text == "OC")
-                {
-                   // OC oc = new OC();
-                    //oc.OCinsuranceAmount = Convert.ToInt16(textBox.Text);
-                }
-                else if (ComboBox1.Text == "AC")
-                {
-                   // AC ac = new AC();
-                   // ac.ACinsuranceAmount = Convert.ToInt16(textBox.Text);
-                }
-                else if (ComboBox1.Text == "Kradzież")
-                {
-                   // Theft theft = new Theft();
-                   // theft.theftinsuranceAmount = Convert.ToInt16(textBox.Text);
-                }
+
+
+            if (ComboBox1.Text == "OC")
+            {
+                OC oc = new OC();
+                oc.OCinsuranceAmount = Convert.ToInt16(textBox.Text);
+            }
+            else if (ComboBox1.Text == "AC")
+            {
+                AC ac = new AC();
+                ac.ACinsuranceAmount = Convert.ToInt16(textBox.Text);
+            }
+            else if (ComboBox1.Text == "Kradzież")
+            {
+                Theft theft = new Theft();
+                theft.theftinsuranceAmount = Convert.ToInt16(textBox.Text);
+            }
 
             if (ComboBox1.Text != "")
             {
@@ -219,9 +219,34 @@ namespace WpfApp1
                     
                  //   DBConnect wyslij = new DBConnect();
                  //   wyslij.Insert(query);
+                 */
+                    //moje-----------------------------------------------------------------------------------
+                    if (MainWindow.connect.OpenConnection() == true)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);", MainWindow.connect.connection);
+                        //         string tempD = (string)registrationform.date;
+                        //DateTime enteredDate = DateTime.Parse(registrationform.date);
+                        cmd.Parameters.AddWithValue("@data_zgloszenia", registrationform.date);
+                        cmd.Parameters.AddWithValue("@status_zgloszenia", "nieznany");
+                        cmd.Parameters.AddWithValue("@Polisa_samochodowa_ID", 1);
+                        cmd.Parameters.AddWithValue("@kraj", registrationform.countryName);
+                        cmd.Parameters.AddWithValue("@miasto", registrationform.cityName);
+                        cmd.Parameters.AddWithValue("@ulica", registrationform.streetName);
+                        cmd.Parameters.AddWithValue("@policja", registrationform.haveThePoliceBeenThere);
+                        cmd.Parameters.AddWithValue("@samochod_zastepczy", registrationform.isReplacementCarNeeded);
+                        cmd.Parameters.AddWithValue("@laweta", registrationform.isCarriageNeeded);
+                        cmd.Parameters.AddWithValue("@numer_policji", registrationform.policeNumberOfAccident);
+                        cmd.Parameters.AddWithValue("@id_klienta", ClientWindow.client_id);
 
+                        //Execute command
+                        cmd.ExecuteNonQuery();
 
-    */
+                        //close connection
+                        MainWindow.connect.CloseConnection();
+                        MessageBox.Show("Uploadowało do bazy rzeczyyyy!");
+                        this.Close();
+
+                    }
                 }
             }
             else
