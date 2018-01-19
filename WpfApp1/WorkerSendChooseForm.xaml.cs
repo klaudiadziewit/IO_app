@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +21,42 @@ namespace WpfApp1
     public partial class WorkerSendChooseForm : Window
     {
         public static string clientFormID;
-        public WorkerSendChooseForm()
+
+        public static string IDofClient = WorkerWindow.clientID;
+        public static string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
+        private static string ExecuteQuery(string query, string columnName)
+        {
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = MainWindow.connect.connection;
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            //Read the data and store them in the list
+            string result = null;
+            while (dataReader.Read())
+            {
+                result += dataReader[columnName] + ", ";
+            }
+            //close Data Reader
+            dataReader.Close();
+                MainWindow.connect.CloseConnection();
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    public WorkerSendChooseForm()
         {
             InitializeComponent();
-
-
+            //string IDofClient = WorkerWindow.clientID;
+            //string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
+            var dane = ExecuteQuery(query, "id_zgloszenia");
+            textBox2.Text = dane;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -44,7 +76,7 @@ namespace WpfApp1
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
+            
         }
     }
 }
