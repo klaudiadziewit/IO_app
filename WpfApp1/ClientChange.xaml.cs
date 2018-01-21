@@ -23,6 +23,7 @@ namespace WpfApp1
         public ClientChange()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -38,6 +39,13 @@ namespace WpfApp1
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ClientWindow clientWindow = new ClientWindow();
+            clientWindow.Show();
+            this.Close();
         }
     }
 }

@@ -22,6 +22,7 @@ namespace WpfApp1
         public Window1()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

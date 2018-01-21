@@ -16,40 +16,26 @@ using MySql.Data.MySqlClient;
 
 namespace WpfApp1
 {
-
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
     /// 
 
-
     public partial class MainWindow : Window
     {
        
      public static DBConnect connect = new DBConnect();
-     
 
         public MainWindow()
         {
             InitializeComponent();
-          
-    }
-
-
-     
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-              
-        //  connection = new MySqlConnection(connectionString);
-
-        //  DBConnect connect = new DBConnect();
-        //this.connection.CloseConnection();
-        // DBConnect connect = new DBConnect();
-        connect.OpenConnection();
+        {            
+            connect.OpenConnection();
             MessageBox.Show("Poprawnie połączono!");
-          //  kupal.Select();
-            //kupal.Count();
             connect.CloseConnection();
 
             startingWindow startingWindow = new startingWindow();

@@ -20,7 +20,6 @@ namespace WpfApp1
     /// </summary>
     public partial class WorkerChangeForm : Window
     {
-
         public static string IDofClient = WorkerWindow.clientID;
         public static string IDofClientForm = WorkerChange.clientFormID;
         RegistrationForm registrationform = new RegistrationForm();
@@ -29,7 +28,8 @@ namespace WpfApp1
         public WorkerChangeForm()
         {
             InitializeComponent();
-            string query = "SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID LIKE '%" + IDofClient + "%'";
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            string query = $"SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID = '{IDofClient}'";
             if (MainWindow.connect.OpenConnection() == true)
             {
                 //Create Command
@@ -53,7 +53,7 @@ namespace WpfApp1
                 dataReader.Close();
 
 
-                string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%'";
+                string query2 = $"SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient} ' AND id_zgloszenia ='{IDofClientForm}'";
                 MySqlCommand cmd2 = new MySqlCommand(query2, MainWindow.connect.connection);
                 MySqlDataReader dataReader2 = cmd2.ExecuteReader();
                 while (dataReader2.Read())
@@ -67,13 +67,8 @@ namespace WpfApp1
                     textBox11.Text = dataReader2["samochod_zastepczy"] + "";
                     textBox12.Text = dataReader2["laweta"] + "";
                     textBox13.Text = dataReader2["status_zgloszenia"] + "";
-
-                    // textBox1.Text =  dataReader["nazwisko"] + "";
-                    //  dataReader["ID"] + ""
                 }
-                //close Data Reader
                 dataReader2.Close();
-
                 MainWindow.connect.CloseConnection();
             }
             else
@@ -83,18 +78,14 @@ namespace WpfApp1
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
             int counter = 0;
             if (textBox1.Text == "") counter++;
             else if (textBox2.Text == "") counter++;
@@ -112,39 +103,47 @@ namespace WpfApp1
             else if (textBox1.Text == "") counter++;
             if (counter == 0)
             {
+                string query3 = $"UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia=' {textBox5.Text}', kraj = '{textBox6.Text}', miasto='{textBox7.Text}', ulica='{textBox8.Text}', policja='{textBox9.Text}', samochod_zastepczy='{textBox11.Text}', laweta='{textBox12.Text}',numer_policji='{textBox10.Text}' WHERE id_zgloszenia = '{IDofClientForm}'";
 
-
-                string query3 = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='" + textBox5.Text + "', kraj='" + textBox6.Text + "', miasto='" + textBox7.Text + "', ulica='" + textBox8.Text + "', policja='" + textBox9.Text + "', samochod_zastepczy='" + textBox11.Text + "', laweta='" + textBox12.Text + "',numer_policji='" + textBox10.Text + "' WHERE id_zgloszenia LIKE '%" + IDofClientForm + "%' ";
-
-
-                //Open connection
                 if (MainWindow.connect.OpenConnection() == true)
                 {
-                    //create mysql command
                     MySqlCommand cmd = new MySqlCommand();
-                    //Assign the query using CommandText
                     cmd.CommandText = query3;
-                    //Assign the connection using Connection
                     cmd.Connection = MainWindow.connect.connection;
-
-                    //Execute query
                     cmd.ExecuteNonQuery();
 
-                    //close connection
                     MainWindow.connect.CloseConnection();
                 }
-
-
-         
+                string haveThePoliceBeenThereValue = textBox9.Text;
+                string isReplacementCarNeededValue = textBox11.Text;
+                string isCarriageNeededValue = textBox12.Text;
 
                 //registrationform.date = Convert.ToInt32(textBox5.Text);
                 registrationform.countryName = textBox6.Text;
                 registrationform.cityName = textBox7.Text;
                 registrationform.streetName = textBox8.Text;
-                registrationform.haveThePoliceBeenThere = Convert.ToBoolean(textBox9.Text);
                 registrationform.policeNumberOfAccident = Convert.ToInt32(textBox10.Text);
-                //registrationform.isReplacementCarNeeded =textBox11.Text = false;
-                registrationform.isCarriageNeeded = Convert.ToBoolean(textBox12.Text);
+
+                if (haveThePoliceBeenThereValue== "0" || haveThePoliceBeenThereValue == "False")
+                {
+                    registrationform.haveThePoliceBeenThere = false;
+                }
+                else
+                    registrationform.haveThePoliceBeenThere = true;
+
+                if (isReplacementCarNeededValue == "0" || isReplacementCarNeededValue=="False")
+                {
+                    registrationform.isReplacementCarNeeded = false;
+                }
+                else
+                    registrationform.isReplacementCarNeeded = true;
+
+                if (isCarriageNeededValue == "0" || isCarriageNeededValue == "False")
+                {
+                    registrationform.isCarriageNeeded = false;
+                }
+                else
+                    registrationform.isCarriageNeeded = true;
 
                 MessageBox.Show("Pomyślnie zmieniono zgłoszenie");
                 this.Close();
@@ -158,6 +157,10 @@ namespace WpfApp1
             WorkerChange workerChange = new WorkerChange();
             workerChange.Show();
             this.Close();
+        }
+
+        private void textBox5_TextChanged(object sender, TextChangedEventArgs e)
+        {
         }
     }
 }

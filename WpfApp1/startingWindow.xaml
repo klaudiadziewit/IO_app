@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="200" Width="200" Topmost="True">
+        Title="Zgłaszanie szkód samochodowych" Height="660" Width="600" Topmost="True">
     <Grid>
-        <Button Content="Klient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,81,0,0" FontSize="14" Click="Button_Click"/>
-        <Button Content="Pracownik" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,121,0,0" FontSize="14" Click="Button_Click_1"/>
-        <TextBox HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" Text="Wybierz kim jesteś" VerticalAlignment="Top" Width="161" Margin="10,23,0,0" IsEnabled="False" FontSize="18"/>
+        <Button Content="Klient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="60,221,0,0" FontSize="26" Click="Button_Click" Height="83"/>
+        <Button Content="Pracownik" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="60,345,0,0" FontSize="26" Click="Button_Click_1" Height="88"/>
+        <TextBox HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" Text="Wybierz kim jesteś" VerticalAlignment="Top" Width="307" Margin="60,79,0,0" IsEnabled="False" FontSize="36"/>
 
     </Grid>
 </Window>

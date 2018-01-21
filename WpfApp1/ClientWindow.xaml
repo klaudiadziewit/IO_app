@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="600" Width="600">
+        Title="Zgłaszanie szkód samochodowych" Height="660" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -14,15 +14,25 @@
             <ColumnDefinition Width="119*"/>
             <ColumnDefinition Width="474*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Wybierz co chcesz zrobić" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,195,0,0" Height="65" Width="423" FontSize="36" Grid.ColumnSpan="5"/>
-        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,293,0,0" Height="54" FontSize="20" Click="Button_Click_2" Grid.ColumnSpan="5"/>
-        <Button Content="Zmień swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,378,0,0" Click="Button_Click" Height="53" FontSize="20" Grid.ColumnSpan="5"/>
-        <Button Content="Usuń swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="534" Margin="37,461,0,0" Click="Button_Click_1" Height="53" FontSize="20" Grid.ColumnSpan="5"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" Margin="1.55,118,0,0" FontSize="30" Grid.Column="4"/>
-        <Label Content="Witaj&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,106,0,0" Grid.ColumnSpan="4" Height="106" Width="91"/>
-        <Label x:Name="label" Content="Podaj swój numer:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="36" Margin="10,28,0,0" Grid.ColumnSpan="5" Height="58" Width="300"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Margin="222.55,41,0,0" TextChanged="textBox_TextChanged" Grid.Column="4"/>
-        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="386.55,41,0,0" FontSize="20" Height="45" Click="button_Click_3" Grid.Column="4"/>
+        <Label Content="Wybierz co chcesz zrobić:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,240,0,0" Height="50" Width="420" FontSize="24" Grid.ColumnSpan="5"/>
+        <Button Content="Dodaj nowe zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="335" Margin="30,320,0,0" Height="60" FontSize="18" Click="sendRegistration" Grid.ColumnSpan="5"/>
+        <Button Content="Zmień swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="335" Margin="30,420,0,0" Click="changingMyRegistration" Height="60" FontSize="18" Grid.ColumnSpan="5"/>
+        <Button Content="Usuń swoje zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="332" Margin="30,520,0,0" Click="deleteRegistration" Height="60" FontSize="18" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Margin="0.667,120,0,0" FontSize="30" Grid.Column="4" RenderTransformOrigin="0.5,0.5" IsEnabled="False"/>
+        <Label Content="Witaj&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="30,117,0,0" Grid.ColumnSpan="4" Height="40" Width="74"/>
+        <Label x:Name="label" Content="Podaj swój numer:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="30,40,0,0" Grid.ColumnSpan="5" Height="58" Width="219"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" Margin="129.667,40,0,0" TextChanged="textBox_TextChanged" Grid.Column="4"/>
+        <Button x:Name="button" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="378.667,73,0,0" FontSize="20" Height="55" Click="button_Click_3" Grid.Column="4" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.142"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Grid.Column="4" Margin="300,520,0,0" Height="60" FontSize="18" Click="Button_Click"/>
 
     </Grid>
 </Window>

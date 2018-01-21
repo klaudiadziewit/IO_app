@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochowych" Height="500" Width="600" Topmost="True">
+        Title="Zgłaszanie szkód samochowych" Height="660" Width="600" Topmost="True">
     <Grid Margin="0,0,0.333,33.667">
-        <Button Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="118" Margin="432,262,0,0" Height="52" FontSize="22" Click="Button_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="321" Margin="62,258,0,0" FontSize="22"/>
-        <Label Content="Wybierz numer zgłoszenia,&#xD;&#xA;które chcesz przyjąć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,46,0,0" Height="140" Width="462" FontSize="36"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" Margin="63,175,0,0" FontSize="22" TextChanged="TextBox_TextChanged" IsEnabled="False"/>
+        <Button Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="363,360,0,0" Height="50" FontSize="20" Click="Button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="44" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="525" Margin="37,271,0,0" FontSize="18"/>
+        <Label Content="Wybierz numer zgłoszenia, które&#xD;&#xA;chcesz przyjąć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,50,0,0" Height="140" Width="529" FontSize="36" IsEnabled="False"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278" Margin="284,200,0,0" FontSize="18" TextChanged="TextBox_TextChanged" IsEnabled="False"/>
+        <Label Content="Numery dostępnych zgłoszeń:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,200,0,0" FontSize="18" IsEnabled="False"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="40,360,0,0" Height="50" FontSize="18" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

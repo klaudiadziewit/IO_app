@@ -25,18 +25,15 @@ namespace WpfApp1
         public WorkerSend()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             string name, surname, personalID, date, country, city, street, police, numberPolice, replacementCar, carriage, status;
-            string query = "SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID LIKE '%" + IDofClient + "%'";
+            string query = $"SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID = '{IDofClient}' ";
            // string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%'";
-            //Open connection
             if (MainWindow.connect.OpenConnection() == true)
             {
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     textBox1.Text = dataReader["imie"] + "";
@@ -44,11 +41,10 @@ namespace WpfApp1
                     textBox3.Text = dataReader["ID"] + "";
                     textBox4.Text = dataReader["pesel"] + "";
                 }
-                //close Data Reader
+
                 dataReader.Close();
 
-
-              string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%'";
+                string query2 = $"SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta ='{IDofClient}' AND id_zgloszenia = '{IDofClientForm}'";
                 MySqlCommand cmd2 = new MySqlCommand(query2, MainWindow.connect.connection);
                 MySqlDataReader dataReader2 = cmd2.ExecuteReader();
                 while (dataReader2.Read())
@@ -67,7 +63,6 @@ namespace WpfApp1
                     // textBox1.Text =  dataReader["nazwisko"] + "";
                     //  dataReader["ID"] + ""
                 }
-                //close Data Reader
                 dataReader2.Close();
 
 
@@ -80,8 +75,8 @@ namespace WpfApp1
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string status = "zatwierdzony";
-            string query3= "UPDATE zgloszenie_szkody_samochodowej SET status_zgloszenia = 'zatwierdzone' WHERE id_zgloszenia = '" + IDofClientForm + "'";
+            string status = "zatwierdzone";
+            string query3= $"UPDATE zgloszenie_szkody_samochodowej SET status_zgloszenia = '{status}' WHERE id_zgloszenia = '{IDofClientForm}'";
             if (MainWindow.connect.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand();
@@ -97,7 +92,8 @@ namespace WpfApp1
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("To zgłoszenie zostało anulowane");
+            WorkerSendChooseForm workerSendChooseForm = new WorkerSendChooseForm();
+            workerSendChooseForm.Show();
             this.Close();
         }
     }

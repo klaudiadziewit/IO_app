@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 
-
 namespace WpfApp1
 {
     /// <summary>
@@ -21,22 +20,53 @@ namespace WpfApp1
     /// </summary>
     public partial class ClientChangeForm : Window
     {
-
         public static string C1, C2, C3, clientID;
         RegistrationForm registrationform = new RegistrationForm();
+
+        private void CheckBox2_Checked(object sender, RoutedEventArgs e)
+        {
+            TextBox6.Text = "0";
+            TextBox6.IsEnabled = false;
+            CheckBox1.IsChecked = false;
+        }
+        private void CheckBox1_Checked(object sender, RoutedEventArgs e)
+        {
+            TextBox6.IsEnabled = true;
+            CheckBox2.IsChecked = false;
+        }
+        private void CheckBox3_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox4.IsChecked = false;
+        }
+        private void CheckBox4_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox3.IsChecked = false;
+        }
+        private void CheckBox5_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox6.IsChecked = false;
+        }
+        private void CheckBox6_Checked(object sender, RoutedEventArgs e)
+        {
+            CheckBox5.IsChecked = false;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ClientChange clientChange = new ClientChange();
+            clientChange.Show();
+            this.Close();
+        }
+
         public void uzupelnij()
         {
-            string query = "SELECT data_zgloszenia,kraj,miasto,ulica,policja,samochod_zastepczy,laweta,numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + clientID + "%' ";
+            string query = $"SELECT data_zgloszenia,kraj,miasto,ulica,policja,samochod_zastepczy,laweta,numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia = '{clientID}' ";
 
-            //Open connection
             if (MainWindow.connect.OpenConnection() == true)
             {
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     DateTime enteredDate = DateTime.Parse(dataReader["data_zgloszenia"]+"");
@@ -48,12 +78,10 @@ namespace WpfApp1
                     C1 = dataReader["policja"] + "";
                     C2 = dataReader["samochod_zastepczy"] + "";
                     C3 = dataReader["laweta"] + "";
-                    TextBox.Text = dataReader["numer_policji"] + "";
+                    TextBox6.Text = dataReader["numer_policji"] + "";
 
                 }
-                //close Data Reader
                 dataReader.Close();
-
                 MainWindow.connect.CloseConnection();
             }
             else
@@ -90,16 +118,13 @@ namespace WpfApp1
         public ClientChangeForm()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             uzupelnij();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
             int licznik = 0;
-
-
-
 
             if (TextBox1.Text == "")
             {
@@ -138,7 +163,6 @@ namespace WpfApp1
             if (licznik != 0)
             {
                 TextBox5.Text = "Niepoprawnie uzupełniono";
-
             }
 
             else
@@ -148,23 +172,14 @@ namespace WpfApp1
                 //string query = "UPDATE zgloszenie_szkody_samochodowej SET imie='Joe', age='22' WHERE name='John Smith'";
                 //string query = "SELECT data_zgloszenia,kraj,miasto,ulica,policja,samochod_zastepczy,laweta,numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + clientID + "%' ";
 
-                string query = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='"+TextBox1.Text+ "', kraj='"+TextBox2.Text+ "', miasto='" + TextBox3.Text + "', ulica='" + TextBox4.Text + "', policja='" + CheckBox1.IsChecked + "', samochod_zastepczy='" + CheckBox3.IsChecked + "', laweta='" + CheckBox5.IsChecked + "',numer_policji='" + TextBox.Text + "' WHERE id_zgloszenia LIKE '%" + clientID + "%' "; 
+                string query = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='"+TextBox1.Text+ "', kraj='"+TextBox2.Text+ "', miasto='" + TextBox3.Text + "', ulica='" + TextBox4.Text + "', policja='" + CheckBox1.IsChecked + "', samochod_zastepczy='" + CheckBox3.IsChecked + "', laweta='" + CheckBox5.IsChecked + "',numer_policji='" + TextBox6.Text + "' WHERE id_zgloszenia LIKE '%" + clientID + "%' "; 
 
-
-                //Open connection
                 if (MainWindow.connect.OpenConnection() == true)
                 {
-                    //create mysql command
                     MySqlCommand cmd = new MySqlCommand();
-                    //Assign the query using CommandText
                     cmd.CommandText = query;
-                    //Assign the connection using Connection
                     cmd.Connection = MainWindow.connect.connection;
-
-                    //Execute query
                     cmd.ExecuteNonQuery();
-
-                    //close connection
                     MainWindow.connect.CloseConnection();
                 }
             }
@@ -179,7 +194,7 @@ namespace WpfApp1
             {
                 CheckBox2.IsEnabled = false;
                 registrationform.haveThePoliceBeenThere = true;
-                registrationform.policeNumberOfAccident = Convert.ToInt16(TextBox5.Text);
+                registrationform.policeNumberOfAccident = Convert.ToInt32(TextBox6.Text);
             }
             else
             {
@@ -193,34 +208,26 @@ namespace WpfApp1
             {
                 CheckBox4.IsEnabled = false;
                 registrationform.isCarriageNeeded = true;
-
             }
             else
             {
                 CheckBox4.IsEnabled = true;
                 registrationform.isCarriageNeeded = false;
-
             }
-
-
 
             if (CheckBox5.IsChecked == true)
             {
                 CheckBox6.IsEnabled = false;
                 registrationform.isReplacementCarNeeded = true;
-
             }
             else
             {
                 CheckBox6.IsEnabled = true;
                 registrationform.isReplacementCarNeeded = false;
-
             }
 
             this.Close();
             MessageBox.Show("Poprawnie zmieniono zgloszenie!");
-
-
         }
     }
 }

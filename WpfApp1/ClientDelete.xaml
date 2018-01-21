@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="421.986" Width="600" Topmost="True">
+        Title="Zgłaszanie szkód samochodowych" Height="660.000" Width="600" Topmost="True">
     <Grid>
-        <Label x:Name="label" Content="Wybierz numer zgłoszenia,&#xD;&#xA;które chcesz anulować" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,41,0,0" FontSize="36"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Margin="191,187,0,0" FontSize="36"/>
-        <Button x:Name="button" Content="Anuluj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Margin="329,295,0,0" FontSize="20" Click="button_Click" Height="50"/>
+        <Label x:Name="label" Content="Wybierz numer zgłoszenia, które&#xD;&#xA;chcesz anulować" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,41,0,0" FontSize="36" Width="543"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Margin="30,274,0,0" FontSize="36"/>
+        <Button x:Name="button" Content="Anuluj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="360,360,0,0" FontSize="20" Click="button_Click" Height="60"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="60" Click="Button_Click_1" Margin="30,360,0,0" FontSize="20"/>
 
     </Grid>
 </Window>

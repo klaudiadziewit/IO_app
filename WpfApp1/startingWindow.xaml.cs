@@ -22,20 +22,14 @@ namespace WpfApp1
         public startingWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
-
             ClientWindow clientWindow = new ClientWindow();
             clientWindow.Show();
             this.Close();
-
-
-
-
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

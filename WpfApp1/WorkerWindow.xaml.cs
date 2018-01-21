@@ -24,9 +24,10 @@ namespace WpfApp1
         public WorkerWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void acceptRegistration(object sender, RoutedEventArgs e)
         {
             WorkerSendChooseForm workerSendChooseForm = new WorkerSendChooseForm();
             workerSendChooseForm.Show();
@@ -36,24 +37,17 @@ namespace WpfApp1
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             string workerID = textBox1.Text;
-            string query = "SELECT imie, nazwisko FROM pracownicy WHERE ID LIKE '%" + workerID + "%' ";
+            string query = $"SELECT imie, nazwisko FROM pracownicy WHERE ID = '{workerID}' ";
 
-            //Open connection
             if (MainWindow.connect.OpenConnection() == true)
             {
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     textBox2.Text = dataReader["imie"] + "" + " " + dataReader["nazwisko"] + "";
-                    // textBox1.Text =  dataReader["nazwisko"] + "";
-                    //  dataReader["ID"] + ""
                 }
-                //close Data Reader
                 dataReader.Close();
 
                 MainWindow.connect.CloseConnection();
@@ -66,27 +60,18 @@ namespace WpfApp1
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             clientID = textBox3.Text;
+            string query = $"SELECT imie, nazwisko FROM klienci WHERE ID = '{clientID}' ";
 
-            string query = "SELECT imie, nazwisko FROM klienci WHERE ID LIKE '%" + clientID + "%' ";
-
-            //Open connection
             if (MainWindow.connect.OpenConnection() == true)
             {
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     textBox4.Text = dataReader["imie"] + "" + " " + dataReader["nazwisko"] + "";
-                    // textBox1.Text =  dataReader["nazwisko"] + "";
-                    //  dataReader["ID"] + ""
                 }
-                //close Data Reader
                 dataReader.Close();
-
                 MainWindow.connect.CloseConnection();
             }
             else
@@ -94,17 +79,24 @@ namespace WpfApp1
             }
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void sendBackRegistration(object sender, RoutedEventArgs e)
         {
             WorkerChange workerChange = new WorkerChange();
             workerChange.Show();
             this.Close();
         }
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void cancelRegistration(object sender, RoutedEventArgs e)
         {
             WorkerDelete workerDelete = new WorkerDelete();
             workerDelete.Show();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            startingWindow startingWindow = new startingWindow();
+            startingWindow.Show();
             this.Close();
         }
     }

@@ -5,36 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="500" Width="600">
+        Title="Zgłaszanie szkód samochodowych" Height="660" Width="600">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,65,0,0"/>
-        <Label Content="Nr zgł. pol." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,198,0,0"/>
-        <Label Content="Ulica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,151,0,0"/>
-        <Label Content="Kraj" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,108,0,0"/>
-        <Label Content="PESEL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,65,0,0"/>
-        <Label Content="Nazwisko" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,23,0,0"/>
-        <Label Content="Imię" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,23,0,0"/>
-        <Label Content="Data" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,108,0,0"/>
-        <Label Content="Miasto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,151,0,0"/>
-        <Label Content="Policja" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,198,0,0"/>
-        <Label Content="Laweta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="292,236,0,0"/>
-        <Label Content ="Samochód zastępczy" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,236,0,0"/>
-        <Label Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,297,0,0"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,68,0,0" IsEnabled="False"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,23,0,0" IsEnabled="False"/>
-        <TextBox x:Name="textBox9" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,198,0,0"/>
-        <TextBox x:Name="textBox11" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Margin="176,240,0,0"/>
-        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,155,0,0"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,112,0,0"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,65,0,0" TextChanged="TextBox_TextChanged_1" IsEnabled="False"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="121,23,0,0" TextChanged="TextBox_TextChanged" IsEnabled="False"/>
-        <TextBox x:Name="textBox13" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Margin="122,300,0,0" IsEnabled="False"/>
-        <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,240,0,0"/>
-        <TextBox x:Name="textBox10" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,201,0,0"/>
-        <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,155,0,0"/>
-        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" Margin="369,108,0,0"/>
-        <Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="335,360,0,0" Height="33" Click="Button_Click"/>
-        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="50,360,0,0" RenderTransformOrigin="-2.178,0.175" Height="33" Click="Button_Click_1"/>
+        <Label Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,100,0,0" FontSize="18"/>
+        <Label Content="Nr zgł. pol." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,280,0,0" FontSize="18"/>
+        <Label Content="Ulica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,220,0,0" FontSize="18"/>
+        <Label Content="Kraj" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,160,0,0" FontSize="18"/>
+        <Label Content="PESEL" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,100,0,0" FontSize="18"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,40,0,0" FontSize="18"/>
+        <Label Content="Imię" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,40,0,0" FontSize="18"/>
+        <Label Content="Data" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,160,0,0" FontSize="18"/>
+        <Label Content="Miasto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,220,0,0" FontSize="18"/>
+        <Label Content="Policja" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,280,0,0" FontSize="18"/>
+        <Label Content="Laweta" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,340,0,0" FontSize="18"/>
+        <Label Content ="Samochód zast." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,340,0,0" FontSize="18"/>
+        <Label Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,400,0,0" FontSize="18"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,100,0,0" IsEnabled="False"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,40,0,0" IsEnabled="False"/>
+        <TextBox x:Name="textBox9" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,280,0,0"/>
+        <TextBox x:Name="textBox11" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="160,340,0,0"/>
+        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,220,0,0"/>
+        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,160,0,0" TextChanged="textBox5_TextChanged"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,100,0,0" TextChanged="TextBox_TextChanged_1" IsEnabled="False"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,40,0,0" TextChanged="TextBox_TextChanged" IsEnabled="False"/>
+        <TextBox x:Name="textBox13" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="454" Margin="120,400,0,0" IsEnabled="False"/>
+        <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,340,0,0"/>
+        <TextBox x:Name="textBox10" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,280,0,0"/>
+        <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,220,0,0"/>
+        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="420,160,0,0"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="341,487,0,0" Height="56" Click="Button_Click" FontSize="24"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="221" Margin="34,490,0,0" RenderTransformOrigin="-2.178,0.175" Height="52" Click="Button_Click_1" FontSize="24"/>
 
     </Grid>
 </Window>

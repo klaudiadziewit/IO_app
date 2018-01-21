@@ -20,8 +20,7 @@ namespace WpfApp1
         public bool isCarriageNeeded;
         public bool isReplacementCarNeeded;
 
-     
-       
+ 
         public RegistrationForm()
         {
            // RegistrationForm registrationForm1 = new RegistrationForm();

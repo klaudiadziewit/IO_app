@@ -22,7 +22,7 @@ namespace WpfApp1
     {
         public static string clientFormID;
         public static string IDofClient = WorkerWindow.clientID;
-        public static string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
+        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}'";
         private static string ExecuteQuery(string query, string columnName)
         {
             if (MainWindow.connect.OpenConnection() == true)
@@ -35,7 +35,7 @@ namespace WpfApp1
                 string result = null;
                 while (dataReader.Read())
                 {
-                    result += dataReader[columnName] + ", ";
+                    result += dataReader[columnName] + " ";
                 }
                 dataReader.Close();
                 MainWindow.connect.CloseConnection();
@@ -49,6 +49,7 @@ namespace WpfApp1
         public WorkerDelete()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             var dane = ExecuteQuery(query, "id_zgloszenia");
             textBox2.Text = dane;
         }
@@ -56,7 +57,7 @@ namespace WpfApp1
         private void button_Click(object sender, RoutedEventArgs e)
         {
             string choose = textBox1.Text;
-            string query = "DELETE FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + textBox1.Text + "%' ";
+            string query = $"DELETE FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia = '{textBox1.Text}' ";
 
             if (MainWindow.connect.OpenConnection() == true)
             {
@@ -64,14 +65,19 @@ namespace WpfApp1
                 cmd.ExecuteNonQuery();
                 MainWindow.connect.CloseConnection();
             }
-
             MessageBox.Show("Pomyślnie usunięto zgłoszenie");
             this.Close();
         }
 
         private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WorkerWindow workerWindow = new WorkerWindow();
+            workerWindow.Show();
+            this.Close();
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochowych" Height="654.667" Width="600">
+        Title="Zgłaszanie szkód samochowych" Height="660.000" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="24*"/>
@@ -50,6 +50,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="button" Content="Dodaj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="188" Grid.Column="1" Margin="370,583,0,0" FontSize="16" Click="button_Click_1" Grid.ColumnSpan="2"/>
+        <Button x:Name="button" Content="Dodaj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="340,590,0,0" FontSize="14" Click="button_Click_1" Grid.ColumnSpan="2" Height="30"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="0,590,0,0" Height="30" FontSize="14" Click="Button_Click_2"/>
     </Grid>
 </Window>

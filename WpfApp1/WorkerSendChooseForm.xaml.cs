@@ -22,7 +22,7 @@ namespace WpfApp1
     {
         public static string clientFormID;
         public static string IDofClient = WorkerWindow.clientID;
-        public static string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' ";
+        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}' ";
         private static string ExecuteQuery(string query, string columnName)
         {
             if (MainWindow.connect.OpenConnection() == true)
@@ -50,6 +50,7 @@ namespace WpfApp1
     public WorkerSendChooseForm()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             var dane = ExecuteQuery(query, "id_zgloszenia");
             textBox2.Text = dane;
         }
@@ -72,6 +73,13 @@ namespace WpfApp1
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WorkerWindow workerWindow = new WorkerWindow();
+            workerWindow.Show();
+            this.Close();
         }
     }
 }

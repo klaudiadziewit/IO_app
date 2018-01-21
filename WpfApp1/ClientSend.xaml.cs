@@ -24,11 +24,10 @@ namespace WpfApp1
         public ClientSend()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             button.IsEnabled = false;
             ComboBox1.IsEnabled = false;
-            textBox.IsEnabled = false;
-
-           
+            textBox.IsEnabled = false; 
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -50,10 +49,6 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int licznik = 0;
-           
-
-
-
                 if (TextBox1.Text == "")
                 {
                     licznik++;
@@ -70,12 +65,10 @@ namespace WpfApp1
                 {
                     licznik++;
                 }
-
                 if (CheckBox1.IsChecked == false && CheckBox2.IsChecked == false)
                 {
                     licznik++;
                 }
-
                 if (CheckBox1.IsChecked == true)
                 {
                     if (TextBox4.Text == "") { licznik++; }
@@ -91,7 +84,6 @@ namespace WpfApp1
             if (licznik != 0)
             {
                 TextBox6.Text = "Niepoprawnie uzupełniono";
-
             }
 
             else
@@ -102,7 +94,6 @@ namespace WpfApp1
                 textBox.IsEnabled = true;
             }
 
-            //RegistrationForm registrationform = new RegistrationForm();
            registrationform.date= Convert.ToInt32( TextBox1.Text);
            registrationform.countryName = TextBox2.Text;
            registrationform.cityName = TextBox3.Text;
@@ -112,7 +103,7 @@ namespace WpfApp1
             {
                 CheckBox2.IsEnabled = false;
                 registrationform.haveThePoliceBeenThere = true;
-                registrationform.policeNumberOfAccident = Convert.ToInt16(TextBox5.Text);
+                registrationform.policeNumberOfAccident = Convert.ToInt32(TextBox5.Text);
             }
             else
             {
@@ -121,35 +112,27 @@ namespace WpfApp1
                 TextBox5.IsEnabled = false;
             }
 
-
             if (CheckBox3.IsChecked == true)
             {
                 CheckBox4.IsEnabled = false;
-                registrationform.isCarriageNeeded = true;
-            
+                registrationform.isCarriageNeeded = true;          
             }
             else
             {
                 CheckBox4.IsEnabled = true;
-                registrationform.isCarriageNeeded = false;
-              
+                registrationform.isCarriageNeeded = false;         
             }
-
-
 
             if (CheckBox5.IsChecked == true)
             {
                 CheckBox6.IsEnabled = false;
                 registrationform.isReplacementCarNeeded = true;
-
             }
             else
             {
                 CheckBox6.IsEnabled = true;
                 registrationform.isReplacementCarNeeded = false;
-
-            }
-           
+            }         
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -159,8 +142,6 @@ namespace WpfApp1
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-
-
             if (ComboBox1.Text == "OC")
             {
                 OC oc = new OC();
@@ -222,7 +203,7 @@ namespace WpfApp1
                     if (MainWindow.connect.OpenConnection() == true)
                     {
                         MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);", MainWindow.connect.connection);
-                        //         string tempD = (string)registrationform.date;
+                        //string tempD = (string)registrationform.date;
                         //DateTime enteredDate = DateTime.Parse(registrationform.date);
                         cmd.Parameters.AddWithValue("@data_zgloszenia", registrationform.date);
                         cmd.Parameters.AddWithValue("@status_zgloszenia", "nieznany");
@@ -241,17 +222,15 @@ namespace WpfApp1
 
                         //close connection
                         MainWindow.connect.CloseConnection();
-                        MessageBox.Show("Uploadowało do bazy rzeczyyyy!");
+                        MessageBox.Show("Twoje zgłoszenie oczekuje na weryfikację");
                         this.Close();
-
                     }
                 }
             }
             else
             {
                 MessageBox.Show("Wybierz typ ubezpiecznie!");
-            }
-            
+            }    
         }
 
         private void CheckBox2_Checked(object sender, RoutedEventArgs e)
@@ -269,6 +248,13 @@ namespace WpfApp1
         private void CheckBox5_Checked(object sender, RoutedEventArgs e)
         {
             CheckBox6.IsChecked = false;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ClientWindow clientWindow = new ClientWindow();
+            clientWindow.Show();
+            this.Close();
         }
     }
 }

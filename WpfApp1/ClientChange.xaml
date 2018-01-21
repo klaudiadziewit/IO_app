@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="500" Width="600" ShowInTaskbar="False">
+        Title="Zgłaszanie szkód samochodowych" Height="660" Width="600" ShowInTaskbar="False">
     <Grid>
-        <Label x:Name="label" Content="Podaj numer zgłoszenia, &#xD;&#xA;które chcesz zmienić " HorizontalAlignment="Left" Margin="105,46,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="87" Margin="119,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="377" TextChanged="textBox_TextChanged" FontSize="36"/>
-        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="390,311,0,0" FontSize="20" Click="button_Click" Height="38"/>
-
+        <Label x:Name="label" Content="Podaj numer zgłoszenia, które &#xD;&#xA;chcesz zmienić " HorizontalAlignment="Left" Margin="30,32,0,0" VerticalAlignment="Top" FontSize="36" Width="544" IsEnabled="False"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="55" Margin="30,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="515" TextChanged="textBox_TextChanged"/>
+        <Button x:Name="button" Content="Dalej" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="360,360,0,0" FontSize="20" Click="button_Click" Height="60"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="30,360,0,0" Height="60" FontSize="20" Click="Button_Click_1"/>
     </Grid>
 </Window>

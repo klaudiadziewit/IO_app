@@ -5,30 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Zgłaszanie szkód samochodowych" Height="566.167" Width="600">
+        Title="Zgłaszanie szkód samochodowych" Height="660.000" Width="600">
     <Grid Margin="0,0,0,21">
-        <Label x:Name="label" Content="Data zdarzenia:" HorizontalAlignment="Left" Margin="29,65,0,0" VerticalAlignment="Top" Height="31" Width="130"/>
-        <Label x:Name="label1" Content="Nazwa kraju:" HorizontalAlignment="Left" Margin="34,112,0,0" VerticalAlignment="Top" Width="86" Height="26"/>
-        <Label x:Name="label2" Content="Nazwa miasta:" HorizontalAlignment="Left" Margin="29,146,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Ulica:" HorizontalAlignment="Left" Margin="29,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.605,-0.192"/>
-        <Label x:Name="label4" Content="Czy na miejscu zdarzenia była policja?" HorizontalAlignment="Left" Margin="22,236,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label5" Content="Numer zdarzenia nadany przez przez policje:" HorizontalAlignment="Left" Margin="22,275,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label6" Content="Czy była podstawiona laweta?" HorizontalAlignment="Left" Margin="22,313,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label7" Content="Czy był podstawiony samochód zastepczy?" HorizontalAlignment="Left" Margin="22,352,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="23" Margin="164,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
-        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="23" Margin="164,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
-        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="26" Margin="164,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
-        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="26" Margin="164,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
-        <Button x:Name="button" Content="Zmień zgłoszenie" HorizontalAlignment="Left" Margin="258,401,0,0" VerticalAlignment="Top" Width="110" Click="button_Click"/>
-        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="36" Margin="184,443,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="23" Margin="291,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225"/>
-        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" Margin="291,324,0,0" VerticalAlignment="Top" Checked="CheckBox3_Checked"/>
-        <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" Margin="405,324,0,0" VerticalAlignment="Top" Checked="CheckBox4_Checked"/>
-        <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" Margin="291,247,0,0" VerticalAlignment="Top" Checked="CheckBox1_Checked"/>
-        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" Margin="405,247,0,0" VerticalAlignment="Top" Checked="CheckBox2_Checked"/>
-        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" Margin="291,358,0,0" VerticalAlignment="Top" Checked="CheckBox5_Checked"/>
-        <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" Margin="405,358,0,0" VerticalAlignment="Top" Checked="CheckBox6_Checked"/>
-        <Label x:Name="label9" Content="Wypełnij formularz" HorizontalAlignment="Left" Margin="34,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label" Content="Data zdarzenia:" HorizontalAlignment="Left" Margin="30,80,0,0" VerticalAlignment="Top" Height="31" Width="130" FontSize="14"/>
+        <Label x:Name="label1" Content="Nazwa kraju:" HorizontalAlignment="Left" Margin="30,140,0,0" VerticalAlignment="Top" Width="86" Height="26" FontSize="14"/>
+        <Label x:Name="label2" Content="Nazwa miasta:" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label3" Content="Ulica:" HorizontalAlignment="Left" Margin="30,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.605,-0.192" FontSize="14"/>
+        <Label x:Name="label4" Content="Czy na miejscu zdarzenia była policja?" HorizontalAlignment="Left" Margin="30,320,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label5" Content="Numer zdarzenia nadany przez przez policje:" HorizontalAlignment="Left" Margin="30,380,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label6" Content="Czy była podstawiona laweta?" HorizontalAlignment="Left" Margin="30,440,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label7" Content="Czy był podstawiony samochód zastepczy?" HorizontalAlignment="Left" Margin="30,500,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="30" Margin="160,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="30" Margin="160,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Height="30" Margin="160,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
+        <TextBox x:Name="TextBox4" HorizontalAlignment="Left" Height="30" Margin="160,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389"/>
+        <Button x:Name="button" Content="Zmień zgłoszenie" HorizontalAlignment="Left" Margin="366,550,0,0" VerticalAlignment="Top" Width="200" Click="button_Click" Height="30" FontSize="14"/>
+        <TextBox x:Name="TextBox5" HorizontalAlignment="Left" Height="32" Margin="30,591,0,-13.333" TextWrapping="Wrap" VerticalAlignment="Top" Width="536"/>
+        <TextBox x:Name="TextBox6" HorizontalAlignment="Left" Height="30" Margin="330,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225"/>
+        <CheckBox x:Name="CheckBox3" Content="Tak" HorizontalAlignment="Left" Margin="330,445,0,0" VerticalAlignment="Top" Checked="CheckBox3_Checked" FontSize="16"/>
+        <CheckBox x:Name="CheckBox4" Content="Nie" HorizontalAlignment="Left" Margin="430,445,0,0" VerticalAlignment="Top" Checked="CheckBox4_Checked" FontSize="16"/>
+        <CheckBox x:Name="CheckBox1" Content="Tak" HorizontalAlignment="Left" Margin="330,325,0,0" VerticalAlignment="Top" Checked="CheckBox1_Checked" FontSize="16"/>
+        <CheckBox x:Name="CheckBox2" Content="Nie" HorizontalAlignment="Left" Margin="430,325,0,0" VerticalAlignment="Top" Checked="CheckBox2_Checked" FontSize="16"/>
+        <CheckBox x:Name="CheckBox5" Content="Tak" HorizontalAlignment="Left" Margin="330,505,0,0" VerticalAlignment="Top" Checked="CheckBox5_Checked" FontSize="16"/>
+        <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" Margin="430,505,0,0" VerticalAlignment="Top" Checked="CheckBox6_Checked" FontSize="16"/>
+        <Label x:Name="label9" Content="Wypełnij formularz" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="30,550,0,0" Height="30" FontSize="14" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

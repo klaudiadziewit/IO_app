@@ -21,45 +21,87 @@ namespace WpfApp1
     public partial class WorkerChange : Window
     {
         public static string clientFormID;
+        public static string IDofClient = WorkerWindow.clientID;
+        public static string IDofClientForm = WorkerChange.clientFormID;
+        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}'";
+        private static string ExecuteQuery(string query, string columnName)
+        {
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = MainWindow.connect.connection;
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string result = null;
+                while (dataReader.Read())
+                {
+                    result += dataReader[columnName] + " ";
+                }
+                dataReader.Close();
+                MainWindow.connect.CloseConnection();
+                return result;
+            }
+            else
+            {
+                MainWindow.connect.CloseConnection();
+                return null;
+            }
+        }
+
         public WorkerChange()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            var dane = ExecuteQuery(query, "id_zgloszenia");
+            textBox2.Text = dane;
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string IDofClient = WorkerWindow.clientID;
-            string IDofClientForm = WorkerChange.clientFormID;
-            string query = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%' ";
+            WorkerChangeForm workerChangeForm = new WorkerChangeForm();
+            workerChangeForm.Show();
+            this.Close();
+            /*//string IDofClient = WorkerWindow.clientID;
+            //string IDofClientForm = WorkerChange.clientFormID;
+            string query2 = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%' ";
 
             if (MainWindow.connect.OpenConnection() == true)
             {
                 //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
+                MySqlCommand cmd2 = new MySqlCommand(query2, MainWindow.connect.connection);
                 //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read() == false)
+                MySqlDataReader dataReader2 = cmd2.ExecuteReader();
+                if (dataReader2.Read() == false)
                     MessageBox.Show("Zgłoszenie nie istnieje. Proszę podać inny numer");
-            else
-            {
-                WorkerChangeForm workerChangeForm = new WorkerChangeForm();
-                workerChangeForm.Show();
-                this.Close();
-            }
-                dataReader.Close();
+                else
+                {
+                    WorkerChangeForm workerChangeForm = new WorkerChangeForm();
+                    workerChangeForm.Show();
+                    this.Close();
+                }
+                dataReader2.Close();
                 MainWindow.connect.CloseConnection();
-
             }
             
             else
             {
-            }
+                MainWindow.connect.CloseConnection();
+            }*/
 
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            clientFormID = textBox.Text;
+            clientFormID = textBox1.Text;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WorkerWindow workerWindow = new WorkerWindow();
+            workerWindow.Show();
+            this.Close();
         }
     }
 }
