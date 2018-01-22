@@ -28,7 +28,6 @@ namespace WpfApp1
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             string name, surname, personalID, date, country, city, street, police, numberPolice, replacementCar, carriage, status;
             string query = $"SELECT ID, imie, nazwisko, pesel  FROM  klienci WHERE ID = '{IDofClient}' ";
-           // string query2 = "SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%'";
             if (MainWindow.connect.OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, MainWindow.connect.connection);
@@ -61,11 +60,8 @@ namespace WpfApp1
                     textBox13.Text = dataReader2["status_zgloszenia"] + "";
 
                     // textBox1.Text =  dataReader["nazwisko"] + "";
-                    //  dataReader["ID"] + ""
                 }
                 dataReader2.Close();
-
-
                 MainWindow.connect.CloseConnection();
             }
             else

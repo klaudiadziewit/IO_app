@@ -55,7 +55,6 @@ namespace WpfApp1
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             var dane = ExecuteQuery(query, "id_zgloszenia");
             textBox2.Text = dane;
-
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -63,33 +62,6 @@ namespace WpfApp1
             WorkerChangeForm workerChangeForm = new WorkerChangeForm();
             workerChangeForm.Show();
             this.Close();
-            /*//string IDofClient = WorkerWindow.clientID;
-            //string IDofClientForm = WorkerChange.clientFormID;
-            string query2 = "SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta LIKE '%" + IDofClient + "%' AND id_zgloszenia LIKE '%" + IDofClientForm + "%' ";
-
-            if (MainWindow.connect.OpenConnection() == true)
-            {
-                //Create Command
-                MySqlCommand cmd2 = new MySqlCommand(query2, MainWindow.connect.connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader2 = cmd2.ExecuteReader();
-                if (dataReader2.Read() == false)
-                    MessageBox.Show("Zgłoszenie nie istnieje. Proszę podać inny numer");
-                else
-                {
-                    WorkerChangeForm workerChangeForm = new WorkerChangeForm();
-                    workerChangeForm.Show();
-                    this.Close();
-                }
-                dataReader2.Close();
-                MainWindow.connect.CloseConnection();
-            }
-            
-            else
-            {
-                MainWindow.connect.CloseConnection();
-            }*/
-
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)

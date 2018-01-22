@@ -22,7 +22,9 @@ namespace WpfApp1
     {
         public static string clientFormID;
         public static string IDofClient = WorkerWindow.clientID;
-        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}' ";
+        public static string status = "zatwierdzone";
+        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}' AND status_zgloszenia != '{status}'";
+
         private static string ExecuteQuery(string query, string columnName)
         {
             if (MainWindow.connect.OpenConnection() == true)
@@ -35,7 +37,7 @@ namespace WpfApp1
             string result = null;
             while (dataReader.Read())
             {
-                result += dataReader[columnName] + ", ";
+                result += dataReader[columnName] + " ";
             }
             dataReader.Close();
                 MainWindow.connect.CloseConnection();

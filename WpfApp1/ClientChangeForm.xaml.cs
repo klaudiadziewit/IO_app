@@ -168,10 +168,7 @@ namespace WpfApp1
             else
             {
                 TextBox5.Text = "Poprawnie uzupełniono";
-                //update
-                //string query = "UPDATE zgloszenie_szkody_samochodowej SET imie='Joe', age='22' WHERE name='John Smith'";
-                //string query = "SELECT data_zgloszenia,kraj,miasto,ulica,policja,samochod_zastepczy,laweta,numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_zgloszenia LIKE '%" + clientID + "%' ";
-
+                
                 string query = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='"+TextBox1.Text+ "', kraj='"+TextBox2.Text+ "', miasto='" + TextBox3.Text + "', ulica='" + TextBox4.Text + "', policja='" + CheckBox1.IsChecked + "', samochod_zastepczy='" + CheckBox3.IsChecked + "', laweta='" + CheckBox5.IsChecked + "',numer_policji='" + TextBox6.Text + "' WHERE id_zgloszenia LIKE '%" + clientID + "%' "; 
 
                 if (MainWindow.connect.OpenConnection() == true)
@@ -184,8 +181,6 @@ namespace WpfApp1
                 }
             }
 
-            //RegistrationForm registrationform = new RegistrationForm();
-            //registrationform.date = Convert.ToInt32(TextBox1.Text);
             registrationform.countryName = TextBox2.Text;
             registrationform.cityName = TextBox3.Text;
             registrationform.streetName = TextBox4.Text;
@@ -202,7 +197,6 @@ namespace WpfApp1
                 registrationform.haveThePoliceBeenThere = false;
                 TextBox5.IsEnabled = false;
             }
-
 
             if (CheckBox3.IsChecked == true)
             {

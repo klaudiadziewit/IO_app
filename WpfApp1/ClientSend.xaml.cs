@@ -217,10 +217,7 @@ namespace WpfApp1
                         cmd.Parameters.AddWithValue("@numer_policji", registrationform.policeNumberOfAccident);
                         cmd.Parameters.AddWithValue("@id_klienta", ClientWindow.client_id);
 
-                        //Execute command
                         cmd.ExecuteNonQuery();
-
-                        //close connection
                         MainWindow.connect.CloseConnection();
                         MessageBox.Show("Twoje zgłoszenie oczekuje na weryfikację");
                         this.Close();

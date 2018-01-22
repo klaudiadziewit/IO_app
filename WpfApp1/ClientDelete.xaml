@@ -9,8 +9,10 @@
     <Grid>
         <Label x:Name="label" Content="Wybierz numer zgłoszenia, które&#xD;&#xA;chcesz anulować" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,41,0,0" FontSize="36" Width="543"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="60" TextWrapping="Wrap" VerticalAlignment="Top" Width="520" Margin="30,274,0,0" FontSize="36"/>
-        <Button x:Name="button" Content="Anuluj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="360,360,0,0" FontSize="20" Click="button_Click" Height="60"/>
+        <Button x:Name="button" Content="Usuń zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="360,360,0,0" FontSize="20" Click="button_Click" Height="60"/>
         <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="60" Click="Button_Click_1" Margin="30,360,0,0" FontSize="20"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="55" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="257" Margin="290,199,0,0" IsEnabled="False" FontSize="18"/>
+        <Label Content="Numery dostępnych zgłoszeń:" HorizontalAlignment="Left" Margin="28,211,0,0" VerticalAlignment="Top" FontSize="18"/>
 
     </Grid>
 </Window>

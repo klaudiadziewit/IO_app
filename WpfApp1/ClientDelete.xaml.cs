@@ -20,10 +20,39 @@ namespace WpfApp1
     /// </summary>
     public partial class ClientDelete : Window
     {
+        public static string clientFormID;
+        public static string IDofClient = ClientWindow.client_id;
+        public static string query = $"SELECT id_zgloszenia FROM zgloszenie_szkody_samochodowej WHERE id_klienta = '{IDofClient}'";
+        private static string ExecuteQuery(string query, string columnName)
+        {
+            if (MainWindow.connect.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = MainWindow.connect.connection;
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                string result = null;
+                while (dataReader.Read())
+                {
+                    result += dataReader[columnName] + " ";
+                }
+                dataReader.Close();
+                MainWindow.connect.CloseConnection();
+                return result;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public ClientDelete()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            var dane = ExecuteQuery(query, "id_zgloszenia");
+            textBox2.Text = dane;
         }
         
         private void button_Click(object sender, RoutedEventArgs e)
@@ -40,7 +69,7 @@ namespace WpfApp1
                 MainWindow.connect.CloseConnection();
             }
 
-            MessageBox.Show("Zgłoszenie zostało usuniete");
+            MessageBox.Show("Zgłoszenie zostało usunięte");
             this.Close();
         }
 

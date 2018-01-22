@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="Zgłaszanie szkód samochodowych" Height="660" Width="600" Topmost="True">
     <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
         <Button Content="Klient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="60,221,0,0" FontSize="26" Click="Button_Click" Height="83"/>
         <Button Content="Pracownik" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Margin="60,345,0,0" FontSize="26" Click="Button_Click_1" Height="88"/>
         <TextBox HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" Text="Wybierz kim jesteś" VerticalAlignment="Top" Width="307" Margin="60,79,0,0" IsEnabled="False" FontSize="36"/>

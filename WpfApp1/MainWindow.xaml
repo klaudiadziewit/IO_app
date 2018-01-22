@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Zgłaszanie szkód samochodowych" Height="660" Width="600">
-    <Grid>
+    <Grid OpacityMask="#FF123574" Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}">
         <Button Content="Połącz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="236" Click="Button_Click" Margin="180,381,0,0" FontSize="22" Height="86"/>
         <Label Content="Witaj w programie do zgłaszania&#xD;&#xA;szkód samochodowych. &#xD;&#xA;&#xA;Kliknij Połącz, by nawiązać &#xD;&#xA;połączenie z serwerem.&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,39,0,0" Height="259" Width="555" FontSize="36" IsEnabled="False"/>
 

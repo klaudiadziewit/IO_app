@@ -66,10 +66,9 @@ namespace WpfApp1
                  while (dataReader.Read())
                  {
                     textBox1.Text = dataReader["imie"] + "" + " " + dataReader["nazwisko"] + "";
-                }
+                 }
 
                 dataReader.Close();
-
                 MainWindow.connect.CloseConnection();
             }
             else
@@ -84,5 +83,4 @@ namespace WpfApp1
             this.Close();
         }
     }
-   }
-//}
+}
