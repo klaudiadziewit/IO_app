@@ -58,7 +58,7 @@ namespace WpfApp1
                     switch (ex.Number)
                     {
                         case 0:
-                            MessageBox.Show("Cannot connect to server.  Contact administrator");
+                            MessageBox.Show("Cannot connect to server. Contact administrator");
                             break;
 
                         case 1045:
@@ -72,15 +72,9 @@ namespace WpfApp1
         //Insert statement
         public void Insert()
         {
-
-       
-
             //open connection
             if (this.OpenConnection() == true)
-            {
-               
-
-               
+            {   
                 MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);", connection);
                 
                 DateTime enteredDate = DateTime.Parse("22-02-2017");
@@ -96,7 +90,6 @@ namespace WpfApp1
                 cmd.Parameters.AddWithValue("@numer_policji", 222);
                 cmd.Parameters.AddWithValue("@id_klienta", 5);
 
-               
                 cmd.ExecuteNonQuery();
 
                 //close connection
@@ -104,8 +97,6 @@ namespace WpfApp1
             } 
         }
 
-       
-        //Close connection
         public bool CloseConnection()
             {
                 try
