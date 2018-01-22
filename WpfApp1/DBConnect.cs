@@ -29,6 +29,7 @@ namespace WpfApp1
                 Initialize();
             }
 
+          
             //Initialize values
             public void Initialize()
             {
@@ -72,7 +73,6 @@ namespace WpfApp1
         //Insert statement
         public void Insert()
         {
-            //open connection
             if (this.OpenConnection() == true)
             {   
                 MySqlCommand cmd = new MySqlCommand("insert into zgloszenie_szkody_samochodowej VALUES(NULL,@data_zgloszenia,@status_zgloszenia,@Polisa_samochodowa_ID, @kraj, @miasto, @ulica, @policja, @samochod_zastepczy, @laweta, @numer_policji, @id_klienta);", connection);
@@ -92,7 +92,6 @@ namespace WpfApp1
 
                 cmd.ExecuteNonQuery();
 
-                //close connection
                 this.CloseConnection();
             } 
         }

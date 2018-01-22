@@ -20,5 +20,15 @@ namespace WpfApp1.Tests
             returned = report.OpenConnection();
             Assert.AreEqual(expected, returned);
         }
+
+        [TestMethod()]
+        public void CloseConnectionTest()
+        {
+            var report = new DBConnect();
+            bool expected = true;
+            bool returned;
+            returned = report.CloseConnection();
+            Assert.AreEqual(expected, returned);
+        }
     }
 }
