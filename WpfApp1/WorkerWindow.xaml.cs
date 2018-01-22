@@ -21,6 +21,7 @@ namespace WpfApp1
     public partial class WorkerWindow : Window
     {
         public static string clientID;
+        Worker worker = new Worker();
         public WorkerWindow()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace WpfApp1
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             string workerID = textBox1.Text;
+            worker.workerID = Convert.ToInt16(textBox1.Text);
             string query = $"SELECT imie, nazwisko FROM pracownicy WHERE ID = '{workerID}' ";
 
             if (MainWindow.connect.OpenConnection() == true)
@@ -51,6 +53,7 @@ namespace WpfApp1
                 dataReader.Close();
 
                 MainWindow.connect.CloseConnection();
+                
             }
             else
             {              

@@ -20,6 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class ClientSend : Window
     {
+        InsurancePolicy IPs = new InsurancePolicy();
         RegistrationForm registrationform = new RegistrationForm();
         public ClientSend()
         {
@@ -27,7 +28,8 @@ namespace WpfApp1
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             button.IsEnabled = false;
             ComboBox1.IsEnabled = false;
-            textBox.IsEnabled = false; 
+            textBox.IsEnabled = false;
+            IPs.policyID = 1;
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -140,7 +142,7 @@ namespace WpfApp1
             
         }
 
-        private void button_Click_1(object sender, RoutedEventArgs e)
+        private void AddNewPolicy(object sender, RoutedEventArgs e)
         {
             if (ComboBox1.Text == "OC")
             {
@@ -254,4 +256,5 @@ namespace WpfApp1
             this.Close();
         }
     }
+    
 }

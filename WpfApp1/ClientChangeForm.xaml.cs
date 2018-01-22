@@ -168,8 +168,8 @@ namespace WpfApp1
             else
             {
                 TextBox5.Text = "Poprawnie uzupełniono";
-                
-                string query = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='"+TextBox1.Text+ "', kraj='"+TextBox2.Text+ "', miasto='" + TextBox3.Text + "', ulica='" + TextBox4.Text + "', policja='" + CheckBox1.IsChecked + "', samochod_zastepczy='" + CheckBox3.IsChecked + "', laweta='" + CheckBox5.IsChecked + "',numer_policji='" + TextBox6.Text + "' WHERE id_zgloszenia LIKE '%" + clientID + "%' "; 
+                string niezna = "nieznany";
+                string query = "UPDATE zgloszenie_szkody_samochodowej SET data_zgloszenia='"+TextBox1.Text+ "',status_zgloszenia='" + niezna + "', kraj='" + TextBox2.Text+ "', miasto='" + TextBox3.Text + "', ulica='" + TextBox4.Text + "', policja='" + CheckBox1.IsChecked + "', samochod_zastepczy='" + CheckBox3.IsChecked + "', laweta='" + CheckBox5.IsChecked + "',numer_policji='" + TextBox6.Text + "' WHERE id_zgloszenia LIKE '%" + clientID + "%' "; 
 
                 if (MainWindow.connect.OpenConnection() == true)
                 {

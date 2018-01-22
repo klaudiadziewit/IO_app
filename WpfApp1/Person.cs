@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class Person
+    public class Person
     {
-        string name;
-        string surname;
-        string birthDate;
-        string telephoneNumber;
-        string address;
+      public  string name;
+        public string surname;
+        public string pesel;
 
         public Person()
         {

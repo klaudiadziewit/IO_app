@@ -22,6 +22,9 @@ namespace WpfApp1
     {
         string IDofClient = WorkerWindow.clientID;
         string IDofClientForm = WorkerSendChooseForm.clientFormID;
+        ReceivedRegistrationForm RRF = new ReceivedRegistrationForm();
+        Person person = new Person();
+        Client client = new Client();
         public WorkerSend()
         {
             InitializeComponent();
@@ -40,7 +43,10 @@ namespace WpfApp1
                     textBox3.Text = dataReader["ID"] + "";
                     textBox4.Text = dataReader["pesel"] + "";
                 }
-
+                person.name = textBox1.Text;
+                person.surname = textBox2.Text;
+                person.pesel = (textBox4.Text);
+                client.personalID = Convert.ToInt16(textBox3.Text);
                 dataReader.Close();
 
                 string query2 = $"SELECT data_zgloszenia, status_zgloszenia, kraj, miasto, ulica, policja, samochod_zastepczy, laweta, numer_policji FROM zgloszenie_szkody_samochodowej WHERE id_klienta ='{IDofClient}' AND id_zgloszenia = '{IDofClientForm}'";
@@ -63,6 +69,14 @@ namespace WpfApp1
                 }
                 dataReader2.Close();
                 MainWindow.connect.CloseConnection();
+                RRF.countryName = textBox6.Text;
+                RRF.cityName = textBox7.Text;
+                RRF.streetName = textBox8.Text;
+               //RRF.haveThePoliceBeenThere = Convert.ToBoolean(textBox9.Text);
+                //RRF.policeNumberOfAccident = Convert.ToInt16(textBox10.Text);
+                //RRF.isReplacementCarNeeded = Convert.ToBoolean(textBox11.Text);
+                //RRF.isCarriageNeeded = Convert.ToBoolean(textBox12.Text);
+                RRF.status = textBox13.Text;
             }
             else
             {
@@ -91,6 +105,11 @@ namespace WpfApp1
             WorkerSendChooseForm workerSendChooseForm = new WorkerSendChooseForm();
             workerSendChooseForm.Show();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

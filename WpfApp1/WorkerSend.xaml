@@ -34,7 +34,8 @@
         <Label x:Name="label_Copy11" Content="Status" HorizontalAlignment="Left" Margin="20,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.611,2.808" FontSize="18"/>
         <Button x:Name="button1" Content="Przyjmij zgłoszenie" HorizontalAlignment="Left" Margin="345,500,0,0" VerticalAlignment="Top" Width="220" Click="button_Click" FontSize="20" Height="57"/>
         <Button x:Name="button_Copy" Content="Cofnij" HorizontalAlignment="Left" Margin="20,500,0,0" VerticalAlignment="Top" Width="220" FontSize="20" Height="53" Click="button_Copy_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,40,0,0" IsEnabled="False"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="120,40,0,0" IsEnabled="False" TextChanged="textBox1_TextChanged"/>
+        <Label x:Name="label8" Content="RRRRMMDD" HorizontalAlignment="Left" Margin="120,134,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

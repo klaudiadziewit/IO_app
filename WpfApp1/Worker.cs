@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class Worker : Person
+    public class Worker : Person
     {
-        int workerID;
+        public int workerID;
 
         public Worker()
         {

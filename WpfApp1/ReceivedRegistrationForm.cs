@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    class ReceivedRegistrationForm
+    public class ReceivedRegistrationForm
     {
-        int receivedRegistrationFormId;
-        int personalID;
-        DateTime date;
-        string countryName;
-        string cityName;
-        string streetName;
-        List<T> personalNumbersOfPeopleTakingPartInAccident;
-        bool haveThePoliceBeenThere;
-        int policeNumberOfAccident;
-        bool isCarriageNeeded;
-        bool isReplacementCarNeeded;
+        public int receivedRegistrationFormId;
+        public int personalID;
+        public DateTime date;
+        public string countryName;
+        public string cityName;
+        public string streetName;
+        public bool haveThePoliceBeenThere;
+        public int policeNumberOfAccident;
+        public bool isCarriageNeeded;
+        public bool isReplacementCarNeeded;
+        public string status;
 
         public ReceivedRegistrationForm()
         {
-            ReceivedRegistrationForm receivedRegistrationForm1 = new ReceivedRegistrationForm();
+            //ReceivedRegistrationForm receivedRegistrationForm1 = new ReceivedRegistrationForm();
         }
 
         void SendBackRegistration(int receivedRegistrationID) { }

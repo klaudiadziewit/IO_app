@@ -50,7 +50,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="button" Content="Dodaj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="340,590,0,0" FontSize="14" Click="button_Click_1" Grid.ColumnSpan="2" Height="30"/>
+        <Button x:Name="button" Content="Dodaj zgłoszenie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="340,590,0,0" FontSize="14" Click="AddNewPolicy" Grid.ColumnSpan="2" Height="30"/>
         <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Margin="0,590,0,0" Height="30" FontSize="14" Click="Button_Click_2"/>
+        <Label x:Name="label8" Content="RRRRMMDD" HorizontalAlignment="Left" Margin="108,6,0,0" VerticalAlignment="Top" Grid.Column="1"/>
     </Grid>
 </Window>

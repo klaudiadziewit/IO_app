@@ -30,6 +30,7 @@
         <CheckBox x:Name="CheckBox6" Content="Nie" HorizontalAlignment="Left" Margin="430,505,0,0" VerticalAlignment="Top" Checked="CheckBox6_Checked" FontSize="16"/>
         <Label x:Name="label9" Content="Wypełnij formularz" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
         <Button Content="Cofnij" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="30,550,0,0" Height="30" FontSize="14" Click="Button_Click_1"/>
+        <Label x:Name="label8" Content="RRRRMMDD" HorizontalAlignment="Left" Margin="160,51,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
